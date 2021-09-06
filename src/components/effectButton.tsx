@@ -3,13 +3,13 @@ import { StyleEffectButton } from "../styles/styles";
 
 interface IButton {
   handleClick: () => void;
-  text: string;
+  buttonText: string;
 }
 
 const Button: FC<IButton> = (props) => {
   return (
     <StyleEffectButton onClick={props.handleClick}>
-      {props.text}
+      {props.buttonText}
     </StyleEffectButton>
   );
 };

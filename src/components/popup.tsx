@@ -1,9 +1,15 @@
 import { FC } from "react";
 
-const Popup: FC = () => {
+interface IPopup {
+  titleText: string;
+  bodyText: string;
+}
+
+const Popup: FC<IPopup> = (props) => {
   return (
     <div>
-      <p>Here is where the popup text will go (hidden until clicked)</p>
+      <p>{props.titleText}</p>
+      <p>{props.bodyText}</p>
     </div>
   );
 };

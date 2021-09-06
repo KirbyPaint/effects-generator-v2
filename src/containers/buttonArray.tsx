@@ -1,15 +1,18 @@
 import { FC } from "react";
 import { StyleButtonArray } from "../styles/styles";
-import ButtonColumn from "./buttonColumn";
+import FumbleButtonColumn from "./columns/fumbleButtonColumn";
+import MajorButtonColumn from "./columns/majorButtonColumn";
+import MinorButtonColumn from "./columns/minorButtonColumn";
+import SevereButtonColumn from "./columns/severeButtonColumn";
 
 const ButtonArray: FC = () => {
   return (
     <div>
       <StyleButtonArray>
-        <ButtonColumn />
-        <ButtonColumn />
-        <ButtonColumn />
-        <ButtonColumn />
+        <FumbleButtonColumn />
+        <MinorButtonColumn />
+        <MajorButtonColumn />
+        <SevereButtonColumn />
       </StyleButtonArray>
     </div>
   );
