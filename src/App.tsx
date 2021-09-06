@@ -8,6 +8,7 @@ function App() {
         <p>Welcome to the new version of the effects generator</p>
       </StyleTitle>
       <MainContainer />
+      <div id="main">MODAL</div>
     </div>
   );
 }

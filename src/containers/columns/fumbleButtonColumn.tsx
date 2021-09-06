@@ -19,6 +19,7 @@ import {
 import Popup from "../../components/popup";
 import { randomNumber } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
+import ReactModal from "react-modal";
 
 function insertPopupText(title: string, text: string) {
   return <Popup titleText={title} bodyText={text} />;
@@ -27,6 +28,7 @@ function insertPopupText(title: string, text: string) {
 const melee = () => {
   const effect = randomNumber();
   insertPopupText(fumbleMeleeTitle[effect], fumbleMeleeText[effect]);
+  <ReactModal isOpen={false} shouldCloseOnOverlayClick={true} />;
 };
 
 const ranged = () => {
