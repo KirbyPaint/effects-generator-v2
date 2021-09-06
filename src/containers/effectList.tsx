@@ -1,11 +1,12 @@
 import { FC } from "react";
 import { StyleEffectList } from "../styles/styles";
+import EffectTextInsert from "./effectTextInsert";
 
 const EffectList: FC = () => {
   return (
     <div>
       <StyleEffectList>
-        <p>Here is where the effects will go</p>
+        <EffectTextInsert />
       </StyleEffectList>
     </div>
   );

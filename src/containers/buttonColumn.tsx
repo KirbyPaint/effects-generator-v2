@@ -1,16 +1,21 @@
 import { FC } from "react";
+import Button from "../components/effectButton";
 import { StyleButtonColumn } from "../styles/styles";
+
+const handleClick = () => {
+  alert("fuck yes");
+};
+
+const test = "test";
 
 const ButtonColumn: FC = () => {
   return (
-    <div>
-      <StyleButtonColumn>
-        <p>Button</p>
-        <p>Button</p>
-        <p>Button</p>
-        <p>Button</p>
-      </StyleButtonColumn>
-    </div>
+    <StyleButtonColumn>
+      <Button handleClick={handleClick} text={test} />
+      <Button handleClick={handleClick} text={test} />
+      <Button handleClick={handleClick} text={test} />
+      <Button handleClick={handleClick} text={test} />
+    </StyleButtonColumn>
   );
 };
 
