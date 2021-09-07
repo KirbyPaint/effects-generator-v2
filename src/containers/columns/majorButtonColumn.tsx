@@ -3,19 +3,19 @@ import Button from "../../components/effectButton";
 import {
   majorBludgeoningText,
   majorBludgeoningTitle,
-} from "../../components/effectsArrays/2major/majorBludgeoning";
+} from "../../components/util/effectsArrays/2major/majorBludgeoning";
 import {
   majorMagicText,
   majorMagicTitle,
-} from "../../components/effectsArrays/2major/majorMagic";
+} from "../../components/util/effectsArrays/2major/majorMagic";
 import {
   majorPiercingText,
   majorPiercingTitle,
-} from "../../components/effectsArrays/2major/majorPiercing";
+} from "../../components/util/effectsArrays/2major/majorPiercing";
 import {
   majorSlashingText,
   majorSlashingTitle,
-} from "../../components/effectsArrays/2major/majorSlashing";
+} from "../../components/util/effectsArrays/2major/majorSlashing";
 import { randomNumber } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
 

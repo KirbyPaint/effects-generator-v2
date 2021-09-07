@@ -3,19 +3,19 @@ import Button from "../../components/effectButton";
 import {
   minorBludgeoningText,
   minorBludgeoningTitle,
-} from "../../components/effectsArrays/1minor/minorBludgeoning";
+} from "../../components/util/effectsArrays/1minor/minorBludgeoning";
 import {
   minorMagicText,
   minorMagicTitle,
-} from "../../components/effectsArrays/1minor/minorMagic";
+} from "../../components/util/effectsArrays/1minor/minorMagic";
 import {
   minorPiercingText,
   minorPiercingTitle,
-} from "../../components/effectsArrays/1minor/minorPiercing";
+} from "../../components/util/effectsArrays/1minor/minorPiercing";
 import {
   minorSlashingText,
   minorSlashingTitle,
-} from "../../components/effectsArrays/1minor/minorSlashing";
+} from "../../components/util/effectsArrays/1minor/minorSlashing";
 import { randomNumber } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
 

@@ -3,19 +3,19 @@ import Button from "../../components/effectButton";
 import {
   severeBludgeoningText,
   severeBludgeoningTitle,
-} from "../../components/effectsArrays/3severe/severeBludgeoning";
+} from "../../components/util/effectsArrays/3severe/severeBludgeoning";
 import {
   severeMagicText,
   severeMagicTitle,
-} from "../../components/effectsArrays/3severe/severeMagic";
+} from "../../components/util/effectsArrays/3severe/severeMagic";
 import {
   severePiercingText,
   severePiercingTitle,
-} from "../../components/effectsArrays/3severe/severePiercing";
+} from "../../components/util/effectsArrays/3severe/severePiercing";
 import {
   severeSlashingText,
   severeSlashingTitle,
-} from "../../components/effectsArrays/3severe/severeSlashing";
+} from "../../components/util/effectsArrays/3severe/severeSlashing";
 import { randomNumber } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
 

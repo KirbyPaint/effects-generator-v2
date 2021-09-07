@@ -8,7 +8,7 @@ const MainContainer: FC = () => {
     <div>
       <StyleMainContainer>
         <ButtonArray />
-        <EffectList />
+        <EffectList data={["title text", "body text"]} />
       </StyleMainContainer>
     </div>
   );

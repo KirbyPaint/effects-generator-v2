@@ -3,19 +3,19 @@ import Button from "../../components/effectButton";
 import {
   fumbleMagicText,
   fumbleMagicTitle,
-} from "../../components/effectsArrays/0fumble/fumbleMagic";
+} from "../../components/util/effectsArrays/0fumble/fumbleMagic";
 import {
   fumbleMeleeText,
   fumbleMeleeTitle,
-} from "../../components/effectsArrays/0fumble/fumbleMelee";
+} from "../../components/util/effectsArrays/0fumble/fumbleMelee";
 import {
   fumbleNaturalText,
   fumbleNaturalTitle,
-} from "../../components/effectsArrays/0fumble/fumbleNatural";
+} from "../../components/util/effectsArrays/0fumble/fumbleNatural";
 import {
   fumbleRangedText,
   fumbleRangedTitle,
-} from "../../components/effectsArrays/0fumble/fumbleRanged";
+} from "../../components/util/effectsArrays/0fumble/fumbleRanged";
 import Popup from "../../components/popup";
 import { randomNumber } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
