@@ -53,15 +53,18 @@ export const StyleEffectTextInsert = styled.div`
 `;
 
 export const StylePopup = styled.div`
-  border: 2px groove brown;
-  border-radius: 15px;
-  background-color: white;
-  width: 300px;
   height: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgb(202, 166, 115);
+  padding: 50px;
+  width: 600px;
+  border: 10px solid rgb(165, 91, 42);
+  border-radius: 50px;
+  border-style: ridge groove groove ridge;
+  box-shadow: 15px 10px 10px 10px rgba(0, 0, 0, 0.2);
 `;
 
 export const StyleHeaderText = styled.p`
@@ -74,4 +77,9 @@ export const StyleHeaderText = styled.p`
   text-shadow: 2px 2px 8px #ff0000, 1px 0px 1px black, 0px 1px 1px black,
     -1px 0px 1px black, 0px -1px 1px black, 2px 0px 1px black, 0px 2px 1px black,
     -2px 0px 1px black, 0px -2px 1px black;
+`;
+
+export const StyleBodyText = styled.div`
+  white-space: pre-wrap;
+  font-size: 20px;
 `;

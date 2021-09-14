@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { StyleHeaderText, StylePopup } from "../styles/styles";
+import { StyleBodyText, StyleHeaderText, StylePopup } from "../styles/styles";
 
 interface IPopup {
   titleText: string;
@@ -12,7 +12,7 @@ const Popup: FC<IPopup> = (props) => {
   return (
     <StylePopup>
       <StyleHeaderText>{titleText}</StyleHeaderText>
-      <p>{bodyText}</p>
+      <StyleBodyText>{bodyText}</StyleBodyText>
     </StylePopup>
   );
 };
