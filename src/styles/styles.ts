@@ -63,3 +63,15 @@ export const StylePopup = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
+
+export const StyleHeaderText = styled.p`
+  display: table;
+  margin: 0 auto;
+  text-decoration: underline;
+  font-family: "moriaregular";
+  font-size: xx-large;
+  color: white;
+  text-shadow: 2px 2px 8px #ff0000, 1px 0px 1px black, 0px 1px 1px black,
+    -1px 0px 1px black, 0px -1px 1px black, 2px 0px 1px black, 0px 2px 1px black,
+    -2px 0px 1px black, 0px -2px 1px black;
+`;

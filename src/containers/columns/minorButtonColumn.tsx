@@ -17,57 +17,36 @@ import {
   minorSlashingTitle,
 } from "../../components/util/effectsArrays/1minor/minorSlashing";
 import { IButtonColumn } from "../../components/util/exports";
-import { randomizer } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
-
-const slashing = () => {
-  const effect = randomizer();
-  alert(`${minorSlashingTitle[effect]} ${minorSlashingText[effect]}`);
-};
-
-const piercing = () => {
-  const effect = randomizer();
-  alert(`${minorPiercingTitle[effect]} ${minorPiercingText[effect]}`);
-};
-
-const bludgeoning = () => {
-  const effect = randomizer();
-  alert(`${minorBludgeoningTitle[effect]} ${minorBludgeoningText[effect]}`);
-};
-
-const magic = () => {
-  const effect = randomizer();
-  alert(`${minorMagicTitle[effect]} ${minorMagicText[effect]}`);
-};
 
 const slashingText = "Slashing";
 const piercingText = "Piercing";
 const bludgeoningText = "Bludgeoning";
 const magicText = "Magic";
 
-const MinorButtonColumn: FC<IButtonColumn> = (props) => {
+const MinorButtonColumn: FC<IButtonColumn> = () => {
   return (
     <StyleButtonColumn>
-      {/* <Button
+      <Button
         buttonText={slashingText}
-        titleText={"function for title text"}
-        bodyText={"function for body text"}
+        titleText={minorSlashingTitle}
+        bodyText={minorSlashingText}
       />
       <Button
         buttonText={piercingText}
-        titleText={"function for title text"}
-        bodyText={"function for body text"}
+        titleText={minorPiercingTitle}
+        bodyText={minorPiercingText}
       />
       <Button
         buttonText={bludgeoningText}
-        titleText={"function for title text"}
-        bodyText={"function for body text"}
+        titleText={minorBludgeoningTitle}
+        bodyText={minorBludgeoningText}
       />
       <Button
         buttonText={magicText}
-        titleText={"function for title text"}
-        bodyText={"function for body text"}
-      /> */}
+        titleText={minorMagicTitle}
+        bodyText={minorMagicText}
+      />
     </StyleButtonColumn>
   );
 };

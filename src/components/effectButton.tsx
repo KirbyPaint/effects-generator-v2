@@ -5,12 +5,12 @@ import { randomizer } from "./util/randomNumberGenerator";
 
 interface IButton {
   buttonText: string;
-  titleTexts: string[];
-  bodyTexts: string[];
+  titleText: string[];
+  bodyText: string[];
 }
 
 const Button: FC<IButton> = (props) => {
-  const { buttonText, titleTexts, bodyTexts } = props;
+  const { buttonText, titleText, bodyText } = props;
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [randomEffect, setRandomEffect] = useState(0);
 
@@ -23,8 +23,8 @@ const Button: FC<IButton> = (props) => {
       {buttonText}
       {modalIsOpen && (
         <Popup
-          titleText={titleTexts[randomEffect]}
-          bodyText={bodyTexts[randomEffect]}
+          titleText={titleText[randomEffect]}
+          bodyText={bodyText[randomEffect]}
           closeModal={toggleShowModal}
         />
       )}

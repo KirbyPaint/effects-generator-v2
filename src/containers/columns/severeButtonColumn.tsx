@@ -17,57 +17,36 @@ import {
   severeSlashingTitle,
 } from "../../components/util/effectsArrays/3severe/severeSlashing";
 import { IButtonColumn } from "../../components/util/exports";
-import { randomizer } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
-
-const slashing = () => {
-  const effect = randomizer();
-  alert(`${severeSlashingTitle[effect]} ${severeSlashingText[effect]}`);
-};
-
-const piercing = () => {
-  const effect = randomizer();
-  alert(`${severePiercingTitle[effect]} ${severePiercingText[effect]}`);
-};
-
-const bludgeoning = () => {
-  const effect = randomizer();
-  alert(`${severeBludgeoningTitle[effect]} ${severeBludgeoningText[effect]}`);
-};
-
-const magic = () => {
-  const effect = randomizer();
-  alert(`${severeMagicTitle[effect]} ${severeMagicText[effect]}`);
-};
 
 const slashingText = "Slashing";
 const piercingText = "Piercing";
 const bludgeoningText = "Bludgeoning";
 const magicText = "Magic";
 
-const SevereButtonColumn: FC<IButtonColumn> = (props) => {
+const SevereButtonColumn: FC<IButtonColumn> = () => {
   return (
     <StyleButtonColumn>
-      {/* <Button
+      <Button
         buttonText={slashingText}
-        titleText={"function for title text"}
-        bodyText={"function for body text"}
+        titleText={severeSlashingTitle}
+        bodyText={severeSlashingText}
       />
       <Button
         buttonText={piercingText}
-        titleText={"function for title text"}
-        bodyText={"function for body text"}
+        titleText={severePiercingTitle}
+        bodyText={severePiercingText}
       />
       <Button
         buttonText={bludgeoningText}
-        titleText={"function for title text"}
-        bodyText={"function for body text"}
+        titleText={severeBludgeoningTitle}
+        bodyText={severeBludgeoningText}
       />
       <Button
         buttonText={magicText}
-        titleText={"function for title text"}
-        bodyText={"function for body text"}
-      /> */}
+        titleText={severeMagicTitle}
+        bodyText={severeMagicText}
+      />
     </StyleButtonColumn>
   );
 };
