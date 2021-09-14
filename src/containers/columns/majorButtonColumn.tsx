@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Button from "../../components/effectButton";
 import {
   majorBludgeoningText,
@@ -16,27 +16,18 @@ import {
   majorSlashingText,
   majorSlashingTitle,
 } from "../../components/util/effectsArrays/2major/majorSlashing";
-import { randomNumber } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
 
-const slashing = () => {
-  const effect = randomNumber();
-  alert(`${majorSlashingTitle[effect]} ${majorSlashingText[effect]}`);
-};
-
 const piercing = () => {
-  const effect = randomNumber();
-  alert(`${majorPiercingTitle[effect]} ${majorPiercingText[effect]}`);
+  alert(`cum`);
 };
 
 const bludgeoning = () => {
-  const effect = randomNumber();
-  alert(`${majorBludgeoningTitle[effect]} ${majorBludgeoningText[effect]}`);
+  alert(`cum`);
 };
 
 const magic = () => {
-  const effect = randomNumber();
-  alert(`${majorMagicTitle[effect]} ${majorMagicText[effect]}`);
+  alert(`cum`);
 };
 
 const slashingText = "Slashing";
@@ -45,12 +36,38 @@ const bludgeoningText = "Bludgeoning";
 const magicText = "Magic";
 
 const MajorButtonColumn: FC = () => {
+  const [randomNumber, setRandomNumber] = useState(0);
+
+  function slashing() {
+    console.log("randomNumber :>> ", randomNumber);
+    return;
+  }
+
   return (
     <StyleButtonColumn>
-      <Button handleClick={slashing} buttonText={slashingText} />
-      <Button handleClick={piercing} buttonText={piercingText} />
-      <Button handleClick={bludgeoning} buttonText={bludgeoningText} />
-      <Button handleClick={magic} buttonText={magicText} />
+      <Button
+        buttonText={slashingText}
+        titleTexts={majorSlashingTitle}
+        bodyTexts={majorSlashingText}
+      />
+      {/* <Button
+        handleClick={piercing}
+        buttonText={piercingText}
+        titleText={"function for title text"}
+        bodyText={"function for body text"}
+      />
+      <Button
+        handleClick={bludgeoning}
+        buttonText={bludgeoningText}
+        titleText={"function for title text"}
+        bodyText={"function for body text"}
+      />
+      <Button
+        handleClick={magic}
+        buttonText={magicText}
+        titleText={"function for title text"}
+        bodyText={"function for body text"}
+      /> */}
     </StyleButtonColumn>
   );
 };

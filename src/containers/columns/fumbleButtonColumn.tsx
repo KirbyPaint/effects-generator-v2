@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Button from "../../components/effectButton";
 import {
   fumbleMagicText,
@@ -17,47 +17,73 @@ import {
   fumbleRangedTitle,
 } from "../../components/util/effectsArrays/0fumble/fumbleRanged";
 import Popup from "../../components/popup";
-import { randomNumber } from "../../components/util/randomNumberGenerator";
+import { randomizer } from "../../components/util/randomNumberGenerator";
 import { StyleButtonColumn } from "../../styles/styles";
-import ReactModal from "react-modal";
-
-function insertPopupText(title: string, text: string) {
-  return <Popup titleText={title} bodyText={text} />;
-}
-
-const melee = () => {
-  const effect = randomNumber();
-  insertPopupText(fumbleMeleeTitle[effect], fumbleMeleeText[effect]);
-  <ReactModal isOpen={false} shouldCloseOnOverlayClick={true} />;
-};
-
-const ranged = () => {
-  const effect = randomNumber();
-  alert(`${fumbleRangedTitle[effect]} ${fumbleRangedText[effect]}`);
-};
-
-const natural = () => {
-  const effect = randomNumber();
-  alert(`${fumbleNaturalTitle[effect]} ${fumbleNaturalText[effect]}`);
-};
-
-const magic = () => {
-  const effect = randomNumber();
-  alert(`${fumbleMagicTitle[effect]} ${fumbleMagicText[effect]}`);
-};
+// import { IButtonColumn } from "../../components/util/exports";
 
 const meleeText = "Melee";
 const rangedText = "Ranged";
 const naturalText = "Natural";
 const magicText = "Magic";
 
-const FumbleButtonColumn: FC = () => {
+const FumbleButtonColumn: FC = (props) => {
+  const [modalIsOpen, setModalIsOpen] = useState(true);
+  const [activeModal, setActiveModal] = useState(""); // might not be needed
+  function closeModal() {
+    setModalIsOpen(false);
+    setActiveModal("");
+  }
+
+  function insertPopupText(title: string, text: string) {
+    // return <Popup titleText={title} bodyText={text} />;
+  }
+
+  const melee = () => {
+    const effect = randomizer();
+    insertPopupText(fumbleMeleeTitle[effect], fumbleMeleeText[effect]);
+  };
+
+  const ranged = () => {
+    const effect = randomizer();
+    alert(`${fumbleRangedTitle[effect]} ${fumbleRangedText[effect]}`);
+  };
+
+  const natural = () => {
+    const effect = randomizer();
+    alert(`${fumbleNaturalTitle[effect]} ${fumbleNaturalText[effect]}`);
+  };
+
+  const magic = () => {
+    const effect = randomizer();
+    alert(`${fumbleMagicTitle[effect]} ${fumbleMagicText[effect]}`);
+  };
+
   return (
     <StyleButtonColumn>
-      <Button handleClick={melee} buttonText={meleeText} />
-      <Button handleClick={ranged} buttonText={rangedText} />
-      <Button handleClick={natural} buttonText={naturalText} />
-      <Button handleClick={magic} buttonText={magicText} />
+      {/* <Button
+        // handleClick={melee}
+        buttonText={meleeText}
+        titleText={"function for title text"}
+        bodyText={"function for body text"}
+      />
+      <Button
+        // handleClick={ranged}
+        buttonText={rangedText}
+        titleText={"function for title text"}
+        bodyText={"function for body text"}
+      />
+      <Button
+        // handleClick={natural}
+        buttonText={naturalText}
+        titleText={"function for title text"}
+        bodyText={"function for body text"}
+      />
+      <Button
+        // handleClick={magic}
+        buttonText={magicText}
+        titleText={"function for title text"}
+        bodyText={"function for body text"}
+      /> */}
     </StyleButtonColumn>
   );
 };
