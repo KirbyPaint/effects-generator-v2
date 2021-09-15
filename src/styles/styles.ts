@@ -1,9 +1,23 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body, html {
+    height: 100%;
+    background-color: lightgray;
+    border: 2px solid red;
+  }
+`;
+
+// export const StylePage = styled.div`
+//   background-color: lightgray;
+//   width: 100%;
+//   height: 100%;
+// `;
 
 export const StyleTitle = styled.h1`
   font-size: 1.5em;
   text-align: center;
-  color: palevioletred;
+  font-family: "moriaregular";
 `;
 
 export const EasyBreezyBeautifulBorder = styled.div`

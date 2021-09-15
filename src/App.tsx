@@ -1,16 +1,15 @@
 import MainContainer from "./containers/mainContainer";
-import { StyleTitle } from "./styles/styles";
+import { StyleTitle, GlobalStyle } from "./styles/styles";
 import GlobalFonts from "./fonts/moria_citadel/fonts";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <GlobalStyle />
       <GlobalFonts />
-      <StyleTitle>
-        <p>Welcome to the new version of the effects generator</p>
-      </StyleTitle>
+      <StyleTitle>Critical Hits - Effects Generator</StyleTitle>
       <MainContainer />
-    </div>
+    </>
   );
 }
 
