@@ -32,7 +32,7 @@ export const fumbleMeleeTitle = [
   `Pulled Muscle`,
   `Punt`,
   `Second Thoughts`,
-  `Slipped `,
+  `Slipped`,
   `Sorry!`,
   `Spinning Swing`,
   `Strain`,
