@@ -1,10 +1,19 @@
-import { minorMagicText, minorMagicTitle } from "./minorMagic";
-import { minorPiercingText, minorPiercingTitle } from "./minorPiercing";
+import {
+  minorMagicText,
+  minorMagicTitle,
+} from "../components/util/effectsArrays/1minor/minorMagic";
+import {
+  minorPiercingText,
+  minorPiercingTitle,
+} from "../components/util/effectsArrays/1minor/minorPiercing";
 import {
   minorBludgeoningText,
   minorBludgeoningTitle,
-} from "./minorBludgeoning";
-import { minorSlashingText, minorSlashingTitle } from "./minorSlashing";
+} from "../components/util/effectsArrays/1minor/minorBludgeoning";
+import {
+  minorSlashingText,
+  minorSlashingTitle,
+} from "../components/util/effectsArrays/1minor/minorSlashing";
 
 describe("minorMagic", () => {
   it("minorMagicTitle array should reflect correct titles", () => {

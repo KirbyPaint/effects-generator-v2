@@ -1,10 +1,19 @@
-import { majorMagicText, majorMagicTitle } from "./majorMagic";
-import { majorPiercingText, majorPiercingTitle } from "./majorPiercing";
+import {
+  majorMagicText,
+  majorMagicTitle,
+} from "../components/util/effectsArrays/2major/majorMagic";
+import {
+  majorPiercingText,
+  majorPiercingTitle,
+} from "../components/util/effectsArrays/2major/majorPiercing";
 import {
   majorBludgeoningText,
   majorBludgeoningTitle,
-} from "./majorBludgeoning";
-import { majorSlashingText, majorSlashingTitle } from "./majorSlashing";
+} from "../components/util/effectsArrays/2major/majorBludgeoning";
+import {
+  majorSlashingText,
+  majorSlashingTitle,
+} from "../components/util/effectsArrays/2major/majorSlashing";
 
 describe("majorMagic", () => {
   it("majorMagicTitle array should reflect correct titles", () => {

@@ -1,10 +1,19 @@
-import { severeMagicText, severeMagicTitle } from "./severeMagic";
-import { severePiercingText, severePiercingTitle } from "./severePiercing";
+import {
+  severeMagicText,
+  severeMagicTitle,
+} from "../components/util/effectsArrays/3severe/severeMagic";
+import {
+  severePiercingText,
+  severePiercingTitle,
+} from "../components/util/effectsArrays/3severe/severePiercing";
 import {
   severeBludgeoningText,
   severeBludgeoningTitle,
-} from "./severeBludgeoning";
-import { severeSlashingText, severeSlashingTitle } from "./severeSlashing";
+} from "../components/util/effectsArrays/3severe/severeBludgeoning";
+import {
+  severeSlashingText,
+  severeSlashingTitle,
+} from "../components/util/effectsArrays/3severe/severeSlashing";
 
 describe("severeMagic", () => {
   it("severeMagicTitle array should reflect correct titles", () => {

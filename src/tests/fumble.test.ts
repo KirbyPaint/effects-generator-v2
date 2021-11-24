@@ -1,7 +1,19 @@
-import { fumbleMagicText, fumbleMagicTitle } from "./fumbleMagic";
-import { fumbleMeleeText, fumbleMeleeTitle } from "./fumbleMelee";
-import { fumbleNaturalText, fumbleNaturalTitle } from "./fumbleNatural";
-import { fumbleRangedText, fumbleRangedTitle } from "./fumbleRanged";
+import {
+  fumbleMagicText,
+  fumbleMagicTitle,
+} from "../components/util/effectsArrays/0fumble/fumbleMagic";
+import {
+  fumbleMeleeText,
+  fumbleMeleeTitle,
+} from "../components/util/effectsArrays/0fumble/fumbleMelee";
+import {
+  fumbleNaturalText,
+  fumbleNaturalTitle,
+} from "../components/util/effectsArrays/0fumble/fumbleNatural";
+import {
+  fumbleRangedText,
+  fumbleRangedTitle,
+} from "../components/util/effectsArrays/0fumble/fumbleRanged";
 
 describe("fumbleMagic", () => {
   it("fumbleMagicTitle array should reflect correct titles", () => {
