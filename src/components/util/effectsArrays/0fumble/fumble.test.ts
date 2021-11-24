@@ -641,45 +641,153 @@ Save: Dexterity DC 20 negates.`);
       .toBe(`Your attack fails and you take 1 point of Constitution damage.
 Save: Constitution DC 20 negates.
 Heal: Rest or restorative magic.`);
-    expect(fumbleNaturalText[11]).toBe(``);
-    expect(fumbleNaturalText[12]).toBe(``);
-    expect(fumbleNaturalText[13]).toBe(``);
-    expect(fumbleNaturalText[14]).toBe(``);
-    expect(fumbleNaturalText[15]).toBe(``);
-    expect(fumbleNaturalText[16]).toBe(``);
-    expect(fumbleNaturalText[17]).toBe(``);
-    expect(fumbleNaturalText[18]).toBe(``);
-    expect(fumbleNaturalText[19]).toBe(``);
-    expect(fumbleNaturalText[20]).toBe(``);
-    expect(fumbleNaturalText[21]).toBe(``);
-    expect(fumbleNaturalText[22]).toBe(``);
-    expect(fumbleNaturalText[23]).toBe(``);
-    expect(fumbleNaturalText[24]).toBe(``);
-    expect(fumbleNaturalText[25]).toBe(``);
-    expect(fumbleNaturalText[26]).toBe(``);
-    expect(fumbleNaturalText[27]).toBe(``);
-    expect(fumbleNaturalText[28]).toBe(``);
-    expect(fumbleNaturalText[29]).toBe(``);
-    expect(fumbleNaturalText[30]).toBe(``);
-    expect(fumbleNaturalText[31]).toBe(``);
-    expect(fumbleNaturalText[32]).toBe(``);
-    expect(fumbleNaturalText[33]).toBe(``);
-    expect(fumbleNaturalText[34]).toBe(``);
-    expect(fumbleNaturalText[35]).toBe(``);
-    expect(fumbleNaturalText[36]).toBe(``);
-    expect(fumbleNaturalText[37]).toBe(``);
-    expect(fumbleNaturalText[38]).toBe(``);
-    expect(fumbleNaturalText[39]).toBe(``);
-    expect(fumbleNaturalText[40]).toBe(``);
-    expect(fumbleNaturalText[41]).toBe(``);
-    expect(fumbleNaturalText[42]).toBe(``);
-    expect(fumbleNaturalText[43]).toBe(``);
-    expect(fumbleNaturalText[44]).toBe(``);
-    expect(fumbleNaturalText[45]).toBe(``);
-    expect(fumbleNaturalText[46]).toBe(``);
-    expect(fumbleNaturalText[47]).toBe(``);
-    expect(fumbleNaturalText[48]).toBe(``);
-    expect(fumbleNaturalText[49]).toBe(``);
+    expect(fumbleNaturalText[11])
+      .toBe(`Your attack fails and you are blinded for 1 round.
+Save: Constitution DC 20 negates.`);
+    expect(fumbleNaturalText[12])
+      .toBe(`Re-roll the attack targeting the next nearest ally to the original target within reach; it is possible to critically hit yourself or an ally in this manner. If there are no other creatures, you target yourself.
+Save: Dexterity DC 20 negates.
+Special: If targeting yourself, you may defend against this attack as normal but may not negate the attack (such as a counter, block, or parry) if it is successful.`);
+    expect(fumbleNaturalText[13])
+      .toBe(`The attack hits you instead and is considered a critical threat. Determine the severity of the critical hit as normal.
+Save: Dexterity DC 20 negates.
+Special: You do not defend against this attack and may not negate the attack (such as a counter, block, or parry).`);
+    expect(fumbleNaturalText[14])
+      .toBe(`Your attack fails and you suffer Disadvantage on all attack rolls until the end of our next turn.
+Save: Resolve DC 20 negates.`);
+    expect(fumbleNaturalText[15])
+      .toBe(`Your attack fails and the target may start a grapple against you as a free action which does not provoke an attack of opportunity.
+Save: Dexterity DC 20 negates.`);
+    expect(fumbleNaturalText[16])
+      .toBe(`Your attack fails and you are deafened until healed.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the deafened condition.`);
+    expect(fumbleNaturalText[17])
+      .toBe(`Your attack fails and you cannot use this attack type again for 1d6 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the attack penalty.`);
+    expect(fumbleNaturalText[18])
+      .toBe(`Your attack fails and you provoke an attack of opportunity from the target.
+Save: Dexterity DC 20 negates.
+Special: Creatures gain Advantage on their attack of opportunity if it is a Bite natural attack.`);
+    expect(fumbleNaturalText[19])
+      .toBe(`Your attack fails and you take bonus damage.
+Save: Dexterity DC 20 negates.`);
+    expect(fumbleNaturalText[20])
+      .toBe(`Your attack fails and you are dazed for 1d3 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the dazed condition.`);
+    expect(fumbleNaturalText[21])
+      .toBe(`Your attack fails and you suffer a -1 penalty on attack rolls until you score a critical hit.
+Save: Constitution DC 20 negates.
+Recover: You must succeed at a Constitution save or score a critical hit to end this effect. You may re-roll the save each round.
+Special: Each attack you miss your target increases the penalty by -1.`);
+    expect(fumbleNaturalText[22])
+      .toBe(`Your attack hits and deals damage to yourself, but it is all nonlethal damage.
+Save: Constitution DC 20 negates.
+Special: You do not defend against this attack and may not negate the attack (such as a counter, block, or parry).`);
+    expect(fumbleNaturalText[23])
+      .toBe(`Your attack fails and you take 1d4 points of Strength damage.
+Save: Constitution DC 20 negates.
+Heal: Rest or restorative magic.`);
+    expect(fumbleNaturalText[24])
+      .toBe(`Your attack hits and deals damage to your target’s armor, and you suffer half the damage dealt and cannot use that attack for 1d3 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the penalty. If opponent does not wear armor, deal damage to shield or an item worn.`);
+    expect(fumbleNaturalText[25])
+      .toBe(`Your attack fails and you become staggered until the end of your next turn.
+Save: Dexterity DC 20 negates.
+Special: If you attempt a move action while staggered this way, you must succeed a DC 20 Acrobatics check or fall prone instead.`);
+    expect(fumbleNaturalText[26])
+      .toBe(`Your attack fails and you cannot use this attack until the end of your next turn.
+Save: Dexterity DC 20 negates.`);
+    expect(fumbleNaturalText[27]).toBe(`Your attack fails and you are exhausted.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check will reduce the exhausted condition to fatigued instead.`);
+    expect(fumbleNaturalText[28])
+      .toBe(`Your attack fails and you provoke an attack of opportunity from all threatening opponents.
+Save: Dexterity DC 20 negates.`);
+    expect(fumbleNaturalText[29])
+      .toBe(`Your attack fails and you suffer Disadvantage on all attacks against that opponent for 3 rounds.
+Save: Wisdom DC 20 negates.
+Recover: A DC 20 Intuition check (as a standard action) removes the attack penalty.`);
+    expect(fumbleNaturalText[30])
+      .toBe(`Your attack fails and you reduce your reach by 5 feet for 3 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the reach penalty.
+Special: If this reduces your reach to 0, you may not attack.`);
+    expect(fumbleNaturalText[31])
+      .toBe(`Your attack fails and you are sickened for 1d6 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the sickened condition.`);
+    expect(fumbleNaturalText[32])
+      .toBe(`Your attack fails and you suffer bonus damage. Your speed is reduced by half until healed.
+Save: Dexterity DC 20 negates.
+Heal: Rest or restorative magic.`);
+    expect(fumbleNaturalText[33])
+      .toBe(`Your attack fails and you kick up dust that blinds you for 1d4 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the blindness condition.`);
+    expect(fumbleNaturalText[34])
+      .toBe(`Your attack fails and you are dazed until the end of your next turn.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the dazed condition.`);
+    expect(fumbleNaturalText[35])
+      .toBe(`Your attack fails and you take 1d4 points of Dexterity damage.
+Save: Constitution DC 20 negates.
+Heal: Rest or restorative magic.`);
+    expect(fumbleNaturalText[36])
+      .toBe(`Your attack fails and you take 1d6 points of nonlethal damage and a -2 penalty on attack rolls with that attack for 1d4 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the attack penalties.`);
+    expect(fumbleNaturalText[37])
+      .toBe(`The attack hits and deals damage to yourself instead of the target.
+Save: Dexterity DC 20 negates.
+Special: You do not defend against this attack and may not negate the attack (such as a counter, block, or parry).`);
+    expect(fumbleNaturalText[38])
+      .toBe(`Your attack fails and you are nauseated for 1d6 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the attack penalties.`);
+    expect(fumbleNaturalText[39]).toBe(`Your attack fails and you are fatigued.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the fatigued condition.`);
+    expect(fumbleNaturalText[40])
+      .toBe(`Your attack fails and you take 1 point of Strength drain.
+Save: Constitution DC 20 negates.
+Heal: Restorative magic is required to heal ability drain.`);
+    expect(fumbleNaturalText[41])
+      .toBe(`Your attack fails and you are knocked prone.
+Save: Dexterity DC 20 negates.
+Recover: You must expend a standard action to stand from being prone. This provokes attacks of opportunity from all threatening opponents.`);
+    expect(fumbleNaturalText[42])
+      .toBe(`Your attack fails and you become entangled in your gear.
+Save: Dexterity DC 20 negates.
+Recover: You must spend a standard action to free yourself.`);
+    expect(fumbleNaturalText[43])
+      .toBe(`Your attack fails and you move 10 feet in a random direction and provoke attacks of opportunity as normal.
+Save: Dexterity DC 20 negates.
+Special: If wearing heavy armor, you suffer disadvantage on your Dexterity save and fall prone on a failed save.`);
+    expect(fumbleNaturalText[44])
+      .toBe(`Your attack fails and you are sickened for 1d4 rounds.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the sickened condition.`);
+    expect(fumbleNaturalText[45])
+      .toBe(`Your attack fails and you fall unconscious for 1d6 rounds.
+Save: Resolve DC 20 negates.
+Heal: A DC 20 Heal check awakens the unconscious character.`);
+    expect(fumbleNaturalText[46])
+      .toBe(`Your attack fails and deals bonus damage to yourself and all creatures adjacent to you except the original target.
+Save: Dexterity DC 20 negates.`);
+    expect(fumbleNaturalText[47])
+      .toBe(`Your attack fails and you are flat-footed until the end of your next turn.
+Save: Dexterity DC 20 negates.`);
+    expect(fumbleNaturalText[48])
+      .toBe(`Your attack fails and you threaten no squares for 1d6 rounds.
+Save: Resolve DC 20 negates.
+Heal: A DC 20 Intuition check (as a standard action) removes the attack penalties.`);
+    expect(fumbleNaturalText[49]).toBe(
+      `The attack hits and deals damage to the original target and the opponent may not negate the attack (such as a counter, block, or parry). This attack may not critically hit or cause any special effects (such as from a Strike maneuver)`
+    );
   });
 });
 
