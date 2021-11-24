@@ -16,6 +16,13 @@ import {
 } from "../components/util/effectsArrays/1minor/minorSlashing";
 
 describe("minorMagic", () => {
+  it("title and text arrays should be the same lengths", () => {
+    expect(minorMagicTitle.length).toEqual(minorMagicText.length);
+    expect(minorPiercingTitle.length).toEqual(minorPiercingText.length);
+    expect(minorBludgeoningTitle.length).toEqual(minorBludgeoningText.length);
+    expect(minorSlashingTitle.length).toEqual(minorSlashingText.length);
+  });
+
   it("minorMagicTitle array should reflect correct titles", () => {
     minorMagicTitle.forEach((text, index) => {
       expect(text).toBe(minorMagicTitle[index]);

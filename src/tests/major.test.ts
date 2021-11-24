@@ -16,6 +16,13 @@ import {
 } from "../components/util/effectsArrays/2major/majorSlashing";
 
 describe("majorMagic", () => {
+  it("title and text arrays should be the same lengths", () => {
+    expect(majorMagicTitle.length).toEqual(majorMagicText.length);
+    expect(majorPiercingTitle.length).toEqual(majorPiercingText.length);
+    expect(majorBludgeoningTitle.length).toEqual(majorBludgeoningText.length);
+    expect(majorSlashingTitle.length).toEqual(majorSlashingText.length);
+  });
+
   it("majorMagicTitle array should reflect correct titles", () => {
     majorMagicTitle.forEach((text, index) => {
       expect(text).toBe(majorMagicTitle[index]);

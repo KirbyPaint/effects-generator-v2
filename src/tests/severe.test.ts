@@ -16,6 +16,13 @@ import {
 } from "../components/util/effectsArrays/3severe/severeSlashing";
 
 describe("severeMagic", () => {
+  it("title and text arrays should be the same lengths", () => {
+    expect(severeMagicTitle.length).toEqual(severeMagicText.length);
+    expect(severePiercingTitle.length).toEqual(severePiercingText.length);
+    expect(severeBludgeoningTitle.length).toEqual(severeBludgeoningText.length);
+    expect(severeSlashingTitle.length).toEqual(severeSlashingText.length);
+  });
+
   it("severeMagicTitle array should reflect correct titles", () => {
     severeMagicTitle.forEach((text, index) => {
       expect(text).toBe(severeMagicTitle[index]);

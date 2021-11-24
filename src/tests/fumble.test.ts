@@ -16,6 +16,13 @@ import {
 } from "../components/util/effectsArrays/0fumble/fumbleRanged";
 
 describe("fumbleMagic", () => {
+  it("title and text arrays should be the same lengths", () => {
+    expect(fumbleMagicTitle.length).toEqual(fumbleMagicText.length);
+    expect(fumbleMeleeTitle.length).toEqual(fumbleMeleeText.length);
+    expect(fumbleNaturalTitle.length).toEqual(fumbleNaturalText.length);
+    expect(fumbleRangedTitle.length).toEqual(fumbleRangedText.length);
+  });
+
   it("fumbleMagicTitle array should reflect correct titles", () => {
     fumbleMagicTitle.forEach((text, index) => {
       expect(text).toBe(fumbleMagicTitle[index]);
