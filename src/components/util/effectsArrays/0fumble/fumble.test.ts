@@ -545,113 +545,143 @@ Special: If wearing heavy armor, you must suffer disadvantage on your Dexterity 
   });
 });
 
-// describe("fumbleNatural", () => {
-//   it("fumbleNaturalTitle array should reflect correct titles", () => {
-//     expect(fumbleNaturalTitle[0]).toBe("");
-//     expect(fumbleNaturalTitle[1]).toBe("");
-//     expect(fumbleNaturalTitle[2]).toBe("");
-//     expect(fumbleNaturalTitle[3]).toBe("");
-//     expect(fumbleNaturalTitle[4]).toBe("");
-//     expect(fumbleNaturalTitle[5]).toBe("");
-//     expect(fumbleNaturalTitle[6]).toBe("");
-//     expect(fumbleNaturalTitle[7]).toBe("");
-//     expect(fumbleNaturalTitle[8]).toBe("");
-//     expect(fumbleNaturalTitle[9]).toBe("");
-//     expect(fumbleNaturalTitle[10]).toBe("");
-//     expect(fumbleNaturalTitle[11]).toBe("");
-//     expect(fumbleNaturalTitle[12]).toBe("");
-//     expect(fumbleNaturalTitle[13]).toBe("");
-//     expect(fumbleNaturalTitle[14]).toBe("");
-//     expect(fumbleNaturalTitle[15]).toBe("");
-//     expect(fumbleNaturalTitle[16]).toBe("");
-//     expect(fumbleNaturalTitle[17]).toBe("");
-//     expect(fumbleNaturalTitle[18]).toBe("");
-//     expect(fumbleNaturalTitle[19]).toBe("");
-//     expect(fumbleNaturalTitle[20]).toBe("");
-//     expect(fumbleNaturalTitle[21]).toBe("");
-//     expect(fumbleNaturalTitle[22]).toBe("");
-//     expect(fumbleNaturalTitle[23]).toBe("");
-//     expect(fumbleNaturalTitle[24]).toBe("");
-//     expect(fumbleNaturalTitle[25]).toBe("");
-//     expect(fumbleNaturalTitle[26]).toBe("");
-//     expect(fumbleNaturalTitle[27]).toBe("");
-//     expect(fumbleNaturalTitle[28]).toBe("");
-//     expect(fumbleNaturalTitle[29]).toBe("");
-//     expect(fumbleNaturalTitle[30]).toBe("");
-//     expect(fumbleNaturalTitle[31]).toBe("");
-//     expect(fumbleNaturalTitle[32]).toBe("");
-//     expect(fumbleNaturalTitle[33]).toBe("");
-//     expect(fumbleNaturalTitle[34]).toBe("");
-//     expect(fumbleNaturalTitle[35]).toBe("");
-//     expect(fumbleNaturalTitle[36]).toBe("");
-//     expect(fumbleNaturalTitle[37]).toBe("");
-//     expect(fumbleNaturalTitle[38]).toBe("");
-//     expect(fumbleNaturalTitle[39]).toBe("");
-//     expect(fumbleNaturalTitle[40]).toBe("");
-//     expect(fumbleNaturalTitle[41]).toBe("");
-//     expect(fumbleNaturalTitle[42]).toBe("");
-//     expect(fumbleNaturalTitle[43]).toBe("");
-//     expect(fumbleNaturalTitle[44]).toBe("");
-//     expect(fumbleNaturalTitle[45]).toBe("");
-//     expect(fumbleNaturalTitle[46]).toBe("");
-//     expect(fumbleNaturalTitle[47]).toBe("");
-//     expect(fumbleNaturalTitle[48]).toBe("");
-//     expect(fumbleNaturalTitle[49]).toBe("");
-//   });
+describe("fumbleNatural", () => {
+  it("fumbleNaturalTitle array should reflect correct titles", () => {
+    expect(fumbleNaturalTitle[0]).toBe("Awkward Attack");
+    expect(fumbleNaturalTitle[1]).toBe("Bad Headbutt");
+    expect(fumbleNaturalTitle[2]).toBe("Battered");
+    expect(fumbleNaturalTitle[3]).toBe("Bleeding Fist");
+    expect(fumbleNaturalTitle[4]).toBe("Bone Bruise");
+    expect(fumbleNaturalTitle[5]).toBe("Broke A Nail");
+    expect(fumbleNaturalTitle[6]).toBe("Broken Tooth");
+    expect(fumbleNaturalTitle[7]).toBe("Bruised Ego");
+    expect(fumbleNaturalTitle[8]).toBe("Brutal Collision");
+    expect(fumbleNaturalTitle[9]).toBe("Caught Your Attack");
+    expect(fumbleNaturalTitle[10]).toBe("Don’t Pick At It");
+    expect(fumbleNaturalTitle[11]).toBe("Eye Strain");
+    expect(fumbleNaturalTitle[12]).toBe("Ferocious Fumble");
+    expect(fumbleNaturalTitle[13]).toBe("Fist Meets Face");
+    expect(fumbleNaturalTitle[14]).toBe("Frustration");
+    expect(fumbleNaturalTitle[15]).toBe("Got Too Close");
+    expect(fumbleNaturalTitle[16]).toBe("Great Roar");
+    expect(fumbleNaturalTitle[17]).toBe("Hangnail");
+    expect(fumbleNaturalTitle[18]).toBe("He Bit Me");
+    expect(fumbleNaturalTitle[19]).toBe("He’s Sharp");
+    expect(fumbleNaturalTitle[20]).toBe("Head, Meet Wall");
+    expect(fumbleNaturalTitle[21]).toBe("Ingrown Nail");
+    expect(fumbleNaturalTitle[22]).toBe("Jam A Finger");
+    expect(fumbleNaturalTitle[23]).toBe("Muscle Tear");
+    expect(fumbleNaturalTitle[24]).toBe("Not The Weak Point");
+    expect(fumbleNaturalTitle[25]).toBe("Off Balance");
+    expect(fumbleNaturalTitle[26]).toBe("Out Of Position");
+    expect(fumbleNaturalTitle[27]).toBe("Overexertion");
+    expect(fumbleNaturalTitle[28]).toBe("Overextend");
+    expect(fumbleNaturalTitle[29]).toBe("Overthink It");
+    expect(fumbleNaturalTitle[30]).toBe("Pinched Nerve");
+    expect(fumbleNaturalTitle[31]).toBe("Pins And Needles");
+    expect(fumbleNaturalTitle[32]).toBe("Punctured Foot");
+    expect(fumbleNaturalTitle[33]).toBe("Smash The Floor");
+    expect(fumbleNaturalTitle[34]).toBe("Sneeze!");
+    expect(fumbleNaturalTitle[35]).toBe("Sprain");
+    expect(fumbleNaturalTitle[36]).toBe("Stinging Failure");
+    expect(fumbleNaturalTitle[37]).toBe("Stop Hitting Yourself");
+    expect(fumbleNaturalTitle[38]).toBe("That’s Disgusting");
+    expect(fumbleNaturalTitle[39]).toBe("Tiring Attack");
+    expect(fumbleNaturalTitle[40]).toBe("Torn Muscle");
+    expect(fumbleNaturalTitle[41]).toBe("Tripped");
+    expect(fumbleNaturalTitle[42]).toBe("Twisted");
+    expect(fumbleNaturalTitle[43]).toBe("Unintentional Move");
+    expect(fumbleNaturalTitle[44]).toBe("Upset Tummy");
+    expect(fumbleNaturalTitle[45]).toBe("We Have A Wiener");
+    expect(fumbleNaturalTitle[46]).toBe("Whirlwind Of Shame");
+    expect(fumbleNaturalTitle[47]).toBe("Wide Open");
+    expect(fumbleNaturalTitle[48]).toBe("Winds Of Change");
+    expect(fumbleNaturalTitle[49]).toBe("How In The World?");
+  });
 
-//   it("fumbleNaturalText array should reflect correct text bodies", () => {
-//     expect(fumbleNaturalText[0]).toBe(``);
-//     expect(fumbleNaturalText[1]).toBe(``);
-//     expect(fumbleNaturalText[2]).toBe(``);
-//     expect(fumbleNaturalText[3]).toBe(``);
-//     expect(fumbleNaturalText[4]).toBe(``);
-//     expect(fumbleNaturalText[5]).toBe(``);
-//     expect(fumbleNaturalText[6]).toBe(``);
-//     expect(fumbleNaturalText[7]).toBe(``);
-//     expect(fumbleNaturalText[8]).toBe(``);
-//     expect(fumbleNaturalText[9]).toBe(``);
-//     expect(fumbleNaturalText[10]).toBe(``);
-//     expect(fumbleNaturalText[11]).toBe(``);
-//     expect(fumbleNaturalText[12]).toBe(``);
-//     expect(fumbleNaturalText[13]).toBe(``);
-//     expect(fumbleNaturalText[14]).toBe(``);
-//     expect(fumbleNaturalText[15]).toBe(``);
-//     expect(fumbleNaturalText[16]).toBe(``);
-//     expect(fumbleNaturalText[17]).toBe(``);
-//     expect(fumbleNaturalText[18]).toBe(``);
-//     expect(fumbleNaturalText[19]).toBe(``);
-//     expect(fumbleNaturalText[20]).toBe(``);
-//     expect(fumbleNaturalText[21]).toBe(``);
-//     expect(fumbleNaturalText[22]).toBe(``);
-//     expect(fumbleNaturalText[23]).toBe(``);
-//     expect(fumbleNaturalText[24]).toBe(``);
-//     expect(fumbleNaturalText[25]).toBe(``);
-//     expect(fumbleNaturalText[26]).toBe(``);
-//     expect(fumbleNaturalText[27]).toBe(``);
-//     expect(fumbleNaturalText[28]).toBe(``);
-//     expect(fumbleNaturalText[29]).toBe(``);
-//     expect(fumbleNaturalText[30]).toBe(``);
-//     expect(fumbleNaturalText[31]).toBe(``);
-//     expect(fumbleNaturalText[32]).toBe(``);
-//     expect(fumbleNaturalText[33]).toBe(``);
-//     expect(fumbleNaturalText[34]).toBe(``);
-//     expect(fumbleNaturalText[35]).toBe(``);
-//     expect(fumbleNaturalText[36]).toBe(``);
-//     expect(fumbleNaturalText[37]).toBe(``);
-//     expect(fumbleNaturalText[38]).toBe(``);
-//     expect(fumbleNaturalText[39]).toBe(``);
-//     expect(fumbleNaturalText[40]).toBe(``);
-//     expect(fumbleNaturalText[41]).toBe(``);
-//     expect(fumbleNaturalText[42]).toBe(``);
-//     expect(fumbleNaturalText[43]).toBe(``);
-//     expect(fumbleNaturalText[44]).toBe(``);
-//     expect(fumbleNaturalText[45]).toBe(``);
-//     expect(fumbleNaturalText[46]).toBe(``);
-//     expect(fumbleNaturalText[47]).toBe(``);
-//     expect(fumbleNaturalText[48]).toBe(``);
-//     expect(fumbleNaturalText[49]).toBe(``);
-//   });
-// });
+  it("fumbleNaturalText array should reflect correct text bodies", () => {
+    expect(fumbleNaturalText[0])
+      .toBe(`Your attack fails and you suffer a -2 penalty to defense rolls for 1d4 rounds.
+Save: Dexterity DC 20 negates.
+Heal: A DC 20 Acrobatics check removes the attack penalties.`);
+    expect(fumbleNaturalText[1])
+      .toBe(`Your attack fails and you are stunned for 1 round.
+Save: Constitution DC 20 negates.`);
+    expect(fumbleNaturalText[2])
+      .toBe(`Your attack fails and you suffer a -2 penalty on saves and skill checks for 1d4 hours.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the penalties.`);
+    expect(fumbleNaturalText[3])
+      .toBe(`Your attack fails and you take 1d6 points of bleed damage.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check ends the bleed effect.`);
+    expect(fumbleNaturalText[4])
+      .toBe(`Your attack fails and you take 1d2 points of Constitution damage.
+Save: Constitution DC 20 negates.
+Heal: Rest or restorative magic.`);
+    expect(fumbleNaturalText[5])
+      .toBe(`Your attack fails and you take bonus damage and you cannot use this attack until healed.
+Save: Constitution DC 20 negates.`);
+    expect(fumbleNaturalText[6])
+      .toBe(`Your attack fails and you suffer a -2 penalty on attack rolls for 1d6 minutes.
+Save: Constitution DC 20 negates.
+Heal: A DC 20 Heal check removes the attack penalties.`);
+    expect(fumbleNaturalText[7])
+      .toBe(`Your attack fails and you suffer Disadvantage to attack any other target for 1d4 rounds (or until the target is dead).
+Save: Resolve DC 20 negates.`);
+    expect(fumbleNaturalText[8])
+      .toBe(`Your attack fails but deals bonus damage to the original target and you are stunned for 2 rounds.
+Save: Constitution DC 20 negates (2 saves).
+Heal: A DC 20 Heal check removes the stunned condition.
+Special: Each saving throw reduces the duration of this fumble by 1 round.`);
+    expect(fumbleNaturalText[9])
+      .toBe(`Your attack fails and the target may attempt to trip, bull rush, or overrun you (target’s choice) as a free action without causing an attack of opportunity.
+Save: Dexterity DC 20 negates.`);
+    expect(fumbleNaturalText[10])
+      .toBe(`Your attack fails and you take 1 point of Constitution damage.
+Save: Constitution DC 20 negates.
+Heal: Rest or restorative magic.`);
+    expect(fumbleNaturalText[11]).toBe(``);
+    expect(fumbleNaturalText[12]).toBe(``);
+    expect(fumbleNaturalText[13]).toBe(``);
+    expect(fumbleNaturalText[14]).toBe(``);
+    expect(fumbleNaturalText[15]).toBe(``);
+    expect(fumbleNaturalText[16]).toBe(``);
+    expect(fumbleNaturalText[17]).toBe(``);
+    expect(fumbleNaturalText[18]).toBe(``);
+    expect(fumbleNaturalText[19]).toBe(``);
+    expect(fumbleNaturalText[20]).toBe(``);
+    expect(fumbleNaturalText[21]).toBe(``);
+    expect(fumbleNaturalText[22]).toBe(``);
+    expect(fumbleNaturalText[23]).toBe(``);
+    expect(fumbleNaturalText[24]).toBe(``);
+    expect(fumbleNaturalText[25]).toBe(``);
+    expect(fumbleNaturalText[26]).toBe(``);
+    expect(fumbleNaturalText[27]).toBe(``);
+    expect(fumbleNaturalText[28]).toBe(``);
+    expect(fumbleNaturalText[29]).toBe(``);
+    expect(fumbleNaturalText[30]).toBe(``);
+    expect(fumbleNaturalText[31]).toBe(``);
+    expect(fumbleNaturalText[32]).toBe(``);
+    expect(fumbleNaturalText[33]).toBe(``);
+    expect(fumbleNaturalText[34]).toBe(``);
+    expect(fumbleNaturalText[35]).toBe(``);
+    expect(fumbleNaturalText[36]).toBe(``);
+    expect(fumbleNaturalText[37]).toBe(``);
+    expect(fumbleNaturalText[38]).toBe(``);
+    expect(fumbleNaturalText[39]).toBe(``);
+    expect(fumbleNaturalText[40]).toBe(``);
+    expect(fumbleNaturalText[41]).toBe(``);
+    expect(fumbleNaturalText[42]).toBe(``);
+    expect(fumbleNaturalText[43]).toBe(``);
+    expect(fumbleNaturalText[44]).toBe(``);
+    expect(fumbleNaturalText[45]).toBe(``);
+    expect(fumbleNaturalText[46]).toBe(``);
+    expect(fumbleNaturalText[47]).toBe(``);
+    expect(fumbleNaturalText[48]).toBe(``);
+    expect(fumbleNaturalText[49]).toBe(``);
+  });
+});
 
 // describe("fumbleRanged", () => {
 //   it("fumbleRangedTitle array should reflect correct titles", () => {
