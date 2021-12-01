@@ -44,3 +44,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## To Do
+
+Fumble Melee - "Catch Your Breath" - on the original site, this text is too wide for the modal and needs to either be shrunken, or needs a larger modal.
+Add a debug mode to generate a specific text in a modal, to validate for exactly this
+Always render the modal centered depending on its height and width (Bone Masher height almost off the screen)
