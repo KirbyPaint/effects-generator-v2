@@ -1,6 +1,6 @@
 # Effects Generator Version 2
 
-Nowhere NEAR being done but it's coming along. Also, an excuse to practice coding outside of work.
+Nowhere NEAR being done but it's coming along. Also, an excuse to practice coding outside of work, and add cool things like husky, custom lint rules, all that jazz.
 
 ## To Do
 
