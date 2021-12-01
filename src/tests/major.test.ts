@@ -14,6 +14,16 @@ import {
   majorSlashingText,
   majorSlashingTitle,
 } from "../components/util/effectsArrays/2major/majorSlashing";
+import {
+  TESTmajorMagicTitle,
+  TESTmajorMagicText,
+  TESTmajorPiercingTitle,
+  TESTmajorPiercingText,
+  TESTmajorBludgeoningTitle,
+  TESTmajorBludgeoningText,
+  TESTmajorSlashingTitle,
+  TESTmajorSlashingText,
+} from "./test-utilities";
 
 describe("majorMagic", () => {
   it("title and text arrays should be the same lengths", () => {
@@ -25,13 +35,13 @@ describe("majorMagic", () => {
 
   it("majorMagicTitle array should reflect correct titles", () => {
     majorMagicTitle.forEach((text, index) => {
-      expect(text).toBe(majorMagicTitle[index]);
+      expect(text).toBe(TESTmajorMagicTitle[index]);
     });
   });
 
   it("majorMagicText array should reflect correct text bodies", () => {
     majorMagicText.forEach((text, index) => {
-      expect(text).toBe(majorMagicText[index]);
+      expect(text).toBe(TESTmajorMagicText[index]);
     });
   });
 });
@@ -39,13 +49,13 @@ describe("majorMagic", () => {
 describe("majorPiercing", () => {
   it("majorPiercingTitle array should reflect correct titles", () => {
     majorPiercingTitle.forEach((text, index) => {
-      expect(text).toBe(majorPiercingTitle[index]);
+      expect(text).toBe(TESTmajorPiercingTitle[index]);
     });
   });
 
   it("majorPiercingText array should reflect correct text bodies", () => {
     majorPiercingText.forEach((text, index) => {
-      expect(text).toBe(majorPiercingText[index]);
+      expect(text).toBe(TESTmajorPiercingText[index]);
     });
   });
 });
@@ -53,13 +63,13 @@ describe("majorPiercing", () => {
 describe("majorBludgeoning", () => {
   it("majorBludgeoningTitle array should reflect correct titles", () => {
     majorBludgeoningTitle.forEach((text, index) => {
-      expect(text).toBe(majorBludgeoningTitle[index]);
+      expect(text).toBe(TESTmajorBludgeoningTitle[index]);
     });
   });
 
   it("majorBludgeoningText array should reflect correct text bodies", () => {
     majorBludgeoningText.forEach((text, index) => {
-      expect(text).toBe(majorBludgeoningText[index]);
+      expect(text).toBe(TESTmajorBludgeoningText[index]);
     });
   });
 });
@@ -67,13 +77,13 @@ describe("majorBludgeoning", () => {
 describe("majorSlashing", () => {
   it("majorSlashingTitle array should reflect correct titles", () => {
     majorSlashingTitle.forEach((text, index) => {
-      expect(text).toBe(majorSlashingTitle[index]);
+      expect(text).toBe(TESTmajorSlashingTitle[index]);
     });
   });
 
   it("majorSlashingText array should reflect correct text bodies", () => {
     majorSlashingText.forEach((text, index) => {
-      expect(text).toBe(majorSlashingText[index]);
+      expect(text).toBe(TESTmajorSlashingText[index]);
     });
   });
 });
