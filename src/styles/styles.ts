@@ -1,5 +1,5 @@
 // Ash
-// Refactor the margin and padding to the containers for consistency
+// Refactor the margin and padding to the containers/columns for consistency
 // Container border style dashed, root elements are solid (for dev testing)
 // obviously actual borders will be solid
 
@@ -42,13 +42,13 @@ export const StyleMainContainer = styled.div`
   grid-template-columns: 85% auto;
 `;
 
-export const StyleEffectList = styled.div`
-  border: 5px solid gold;
+export const StyleEffectContainer = styled.div`
+  border: 5px dashed gold;
   max-height: auto;
 `;
 
 export const StyleButtonColumn = styled.div`
-  border: 2px solid lightblue;
+  border: 2px dashed purple;
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
   justify-content: center;
@@ -70,25 +70,31 @@ export const StyleEffectButton = styled.div`
   color: white;
 `;
 
-export const StyleEffectTextInsert = styled.div`
+export const StyleEffectCard = styled.div`
   border: 2px solid green;
   padding: 5px;
   margin: 5px;
 `;
 
-export const StylePopup = styled.div`
-  height: 300px;
+export const StylePopupWindow = styled.div`
+  height: min-content;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(202, 166, 115);
-  padding: 50px;
-  width: 600px;
+  /* padding: 50px; */
+  width: (min-content + 50px);
   border: 10px solid rgb(165, 91, 42);
   border-radius: 50px;
   border-style: ridge groove groove ridge;
   box-shadow: 15px 10px 10px 10px rgba(0, 0, 0, 0.2);
+`;
+
+export const StylePopupContainer = styled.div`
+  /* border: 2px dashed green; */
+  margin: 10px;
+  padding: 10px;
 `;
 
 export const StylePopupTitle = styled.p`

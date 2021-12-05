@@ -13,10 +13,14 @@ const Button: FC<IButton> = (props) => {
   const { buttonText, titleText, bodyText } = props;
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [randomEffect, setRandomEffect] = useState(0);
+  const [cardTitleText, setCardTitleText] = useState("");
+  const [cardBodyText, setCardBodyText] = useState("");
 
   function toggleShowModal() {
     setRandomEffect(randomizer());
     setModalIsOpen(!modalIsOpen);
+    setCardTitleText(titleText[randomEffect]);
+    setCardBodyText(bodyText[randomEffect]);
   }
   return (
     <StyleEffectButton onClick={toggleShowModal}>

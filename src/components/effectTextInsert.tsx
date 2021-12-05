@@ -1,18 +1,18 @@
 import { FC } from "react";
-import { StyleEffectTextInsert } from "../styles/styles";
+import { StyleEffectCard } from "../styles/styles";
 
 interface IEffectList {
   title: string;
   text: string;
 }
 
-const EffectTextInsert: FC<IEffectList> = (props) => {
+const EffectCard: FC<IEffectList> = (props) => {
   return (
-    <StyleEffectTextInsert>
-      {props.title}
-      {props.text}
-    </StyleEffectTextInsert>
+    <StyleEffectCard>
+      <p>{props.title}:</p>
+      <p>{props.text}</p>
+    </StyleEffectCard>
   );
 };
 
-export default EffectTextInsert;
+export default EffectCard;

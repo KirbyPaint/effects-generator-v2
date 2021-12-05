@@ -1,7 +1,7 @@
 import { FC } from "react";
 import EffectTextInsert from "../components/effectTextInsert";
-import { StyleEffectList } from "../styles/styles";
 import { v4 } from "uuid";
+import { StyleEffectContainer } from "../styles/styles";
 
 interface IEffectList {
   data: string[];
@@ -9,11 +9,9 @@ interface IEffectList {
 
 const EffectList: FC<IEffectList> = ({ data }) => {
   return (
-    <StyleEffectList>
-      {data.map((effect) => (
-        <EffectTextInsert title={data[0]} text={effect[1]} key={v4()} />
-      ))}
-    </StyleEffectList>
+    <StyleEffectContainer>
+      <EffectTextInsert title={data[0]} text={data[1]} key={v4()} />
+    </StyleEffectContainer>
   );
 };
 
