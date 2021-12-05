@@ -17,7 +17,10 @@ import {
   severeSlashingTitle,
 } from "../../components/util/effectsArrays/3severe/severeSlashing";
 import { IButtonColumn } from "../../components/util/exports";
-import { StyleButtonColumn } from "../../styles/styles";
+import {
+  StyleButtonColumn,
+  StyleEffectButtonContainer,
+} from "../../styles/styles";
 
 const slashingText = "Slashing";
 const piercingText = "Piercing";
@@ -27,26 +30,34 @@ const magicText = "Magic";
 const SevereButtonColumn: FC<IButtonColumn> = () => {
   return (
     <StyleButtonColumn>
-      <Button
-        buttonText={slashingText}
-        titleText={severeSlashingTitle}
-        bodyText={severeSlashingText}
-      />
-      <Button
-        buttonText={piercingText}
-        titleText={severePiercingTitle}
-        bodyText={severePiercingText}
-      />
-      <Button
-        buttonText={bludgeoningText}
-        titleText={severeBludgeoningTitle}
-        bodyText={severeBludgeoningText}
-      />
-      <Button
-        buttonText={magicText}
-        titleText={severeMagicTitle}
-        bodyText={severeMagicText}
-      />
+      <StyleEffectButtonContainer>
+        <Button
+          buttonText={slashingText}
+          titleText={severeSlashingTitle}
+          bodyText={severeSlashingText}
+        />
+      </StyleEffectButtonContainer>
+      <StyleEffectButtonContainer>
+        <Button
+          buttonText={piercingText}
+          titleText={severePiercingTitle}
+          bodyText={severePiercingText}
+        />
+      </StyleEffectButtonContainer>
+      <StyleEffectButtonContainer>
+        <Button
+          buttonText={bludgeoningText}
+          titleText={severeBludgeoningTitle}
+          bodyText={severeBludgeoningText}
+        />
+      </StyleEffectButtonContainer>
+      <StyleEffectButtonContainer>
+        <Button
+          buttonText={magicText}
+          titleText={severeMagicTitle}
+          bodyText={severeMagicText}
+        />
+      </StyleEffectButtonContainer>
     </StyleButtonColumn>
   );
 };

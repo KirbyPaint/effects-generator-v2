@@ -17,7 +17,10 @@ import {
   minorSlashingTitle,
 } from "../../components/util/effectsArrays/1minor/minorSlashing";
 import { IButtonColumn } from "../../components/util/exports";
-import { StyleButtonColumn } from "../../styles/styles";
+import {
+  StyleButtonColumn,
+  StyleEffectButtonContainer,
+} from "../../styles/styles";
 
 const slashingText = "Slashing";
 const piercingText = "Piercing";
@@ -27,26 +30,34 @@ const magicText = "Magic";
 const MinorButtonColumn: FC<IButtonColumn> = () => {
   return (
     <StyleButtonColumn>
-      <Button
-        buttonText={slashingText}
-        titleText={minorSlashingTitle}
-        bodyText={minorSlashingText}
-      />
-      <Button
-        buttonText={piercingText}
-        titleText={minorPiercingTitle}
-        bodyText={minorPiercingText}
-      />
-      <Button
-        buttonText={bludgeoningText}
-        titleText={minorBludgeoningTitle}
-        bodyText={minorBludgeoningText}
-      />
-      <Button
-        buttonText={magicText}
-        titleText={minorMagicTitle}
-        bodyText={minorMagicText}
-      />
+      <StyleEffectButtonContainer>
+        <Button
+          buttonText={slashingText}
+          titleText={minorSlashingTitle}
+          bodyText={minorSlashingText}
+        />
+      </StyleEffectButtonContainer>
+      <StyleEffectButtonContainer>
+        <Button
+          buttonText={piercingText}
+          titleText={minorPiercingTitle}
+          bodyText={minorPiercingText}
+        />
+      </StyleEffectButtonContainer>
+      <StyleEffectButtonContainer>
+        <Button
+          buttonText={bludgeoningText}
+          titleText={minorBludgeoningTitle}
+          bodyText={minorBludgeoningText}
+        />
+      </StyleEffectButtonContainer>
+      <StyleEffectButtonContainer>
+        <Button
+          buttonText={magicText}
+          titleText={minorMagicTitle}
+          bodyText={minorMagicText}
+        />
+      </StyleEffectButtonContainer>
     </StyleButtonColumn>
   );
 };

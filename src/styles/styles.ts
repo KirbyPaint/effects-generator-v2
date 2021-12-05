@@ -1,3 +1,8 @@
+// Ash
+// Refactor the margin and padding to the containers for consistency
+// Container border style dashed, root elements are solid (for dev testing)
+// obviously actual borders will be solid
+
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -30,7 +35,7 @@ export const StyleButtonArray = styled.div`
 `;
 
 export const StyleMainContainer = styled.div`
-  border: 10px solid blue;
+  border: 10px dashed red;
   max-width: 100%;
   height: 100%;
   display: grid;
@@ -50,12 +55,19 @@ export const StyleButtonColumn = styled.div`
   padding: 10px 0px;
 `;
 
-export const StyleEffectButton = styled.div`
-  border: 2px solid red;
-  width: 50px;
-  height: 50px;
-  border-radius: 300px;
+export const StyleEffectButtonContainer = styled.div`
+  border: 2px dashed blue;
   margin: 10px;
+  padding: 10px;
+`;
+
+export const StyleEffectButton = styled.div`
+  border: 2px solid blue;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  border-radius: 300px;
+  color: white;
 `;
 
 export const StyleEffectTextInsert = styled.div`
