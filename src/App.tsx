@@ -2,7 +2,7 @@ import MainContainer from "./containers/mainContainer";
 import { StyleTitle, GlobalStyle } from "./styles/styles";
 import GlobalFonts from "./fonts/moria_citadel/fonts";
 
-function App() {
+function App(): JSX.Element {
   return (
     <>
       <GlobalStyle />
