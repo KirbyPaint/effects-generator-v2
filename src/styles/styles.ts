@@ -4,28 +4,26 @@ export const GlobalStyle = createGlobalStyle`
   body, html {
     height: 100%;
     background-color: lightgray;
-    border: 2px solid red;
   }
 `;
 
-// export const StylePage = styled.div`
-//   background-color: lightgray;
-//   width: 100%;
-//   height: 100%;
-// `;
-
-export const StyleTitle = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  font-family: "moriaregular";
+export const StyleHeaderContainer = styled.div`
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 30px;
+  padding: 5px;
 `;
 
-export const EasyBreezyBeautifulBorder = styled.div`
-  border: 2px solid red;
+export const StyleHeaderText = styled.h1`
+  display: table;
+  margin: 0 auto;
+  font-family: "Moria Citadel";
+  font-size: xx-large;
+  color: white;
 `;
 
 export const StyleButtonArray = styled.div`
-  border: 5px solid black;
+  border: 5px dashed black;
   border-radius: 15px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -81,11 +79,11 @@ export const StylePopup = styled.div`
   box-shadow: 15px 10px 10px 10px rgba(0, 0, 0, 0.2);
 `;
 
-export const StyleHeaderText = styled.p`
+export const StylePopupTitle = styled.p`
   display: table;
   margin: 0 auto;
   text-decoration: underline;
-  font-family: "moriaregular";
+  font-family: "Moria Citadel";
   font-size: xx-large;
   color: white;
   text-shadow: 2px 2px 8px #ff0000, 1px 0px 1px black, 0px 1px 1px black,

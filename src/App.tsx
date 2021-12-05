@@ -1,5 +1,5 @@
 import MainContainer from "./containers/mainContainer";
-import { StyleTitle, GlobalStyle } from "./styles/styles";
+import { GlobalStyle } from "./styles/styles";
 import GlobalFonts from "./fonts/moria_citadel/fonts";
 
 function App(): JSX.Element {
@@ -7,7 +7,6 @@ function App(): JSX.Element {
     <>
       <GlobalStyle />
       <GlobalFonts />
-      <StyleTitle>Critical Hits - Effects Generator</StyleTitle>
       <MainContainer />
     </>
   );
