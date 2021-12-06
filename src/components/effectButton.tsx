@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { StyleEffectButton } from "../styles/styles";
+import { StyleButton } from "../styles/styles";
 import Popup from "../components/popup";
 import { randomizer } from "./util/randomNumberGenerator";
 
@@ -23,7 +23,7 @@ const Button: FC<IButton> = (props) => {
     setCardBodyText(bodyText[randomEffect]);
   }
   return (
-    <StyleEffectButton onClick={toggleShowModal}>
+    <StyleButton onClick={toggleShowModal}>
       {buttonText}
       {modalIsOpen && (
         <Popup
@@ -32,7 +32,7 @@ const Button: FC<IButton> = (props) => {
           closeModal={toggleShowModal}
         />
       )}
-    </StyleEffectButton>
+    </StyleButton>
   );
 };
 

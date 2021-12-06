@@ -26,7 +26,7 @@ export const StyleHeaderText = styled.h1`
   color: white;
 `;
 
-export const StyleButtonArray = styled.div`
+export const StyleButtonColumnContainer = styled.div`
   border: 5px dashed black;
   border-radius: 15px;
   display: grid;
@@ -54,13 +54,13 @@ export const StyleButtonColumn = styled.div`
   padding: 10px 0px;
 `;
 
-export const StyleEffectButtonContainer = styled.div`
+export const StyleButtonContainer = styled.div`
   border: 2px dashed blue;
   margin: 10px;
   padding: 10px;
 `;
 
-export const StyleEffectButton = styled.div`
+export const StyleButton = styled.div`
   border: 2px solid blue;
   background-color: blue;
   width: 100px;

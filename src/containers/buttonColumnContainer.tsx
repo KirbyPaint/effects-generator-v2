@@ -1,21 +1,21 @@
 import { FC } from "react";
-import { StyleButtonArray } from "../styles/styles";
+import { StyleButtonColumnContainer } from "../styles/styles";
 import FumbleButtonColumn from "./columns/fumbleButtonColumn";
 import MajorButtonColumn from "./columns/majorButtonColumn";
 import MinorButtonColumn from "./columns/minorButtonColumn";
 import SevereButtonColumn from "./columns/severeButtonColumn";
 
-const ButtonArray: FC = () => {
+const ButtonColumnContainer: FC = () => {
   return (
     <div>
-      <StyleButtonArray>
+      <StyleButtonColumnContainer>
         <FumbleButtonColumn />
         <MinorButtonColumn />
         <MajorButtonColumn />
         <SevereButtonColumn />
-      </StyleButtonArray>
+      </StyleButtonColumnContainer>
     </div>
   );
 };
 
-export default ButtonArray;
+export default ButtonColumnContainer;

@@ -16,10 +16,7 @@ import {
   majorSlashingText,
   majorSlashingTitle,
 } from "../../components/util/effectsArrays/2major/majorSlashing";
-import {
-  StyleButtonColumn,
-  StyleEffectButtonContainer,
-} from "../../styles/styles";
+import { StyleButtonColumn, StyleButtonContainer } from "../../styles/styles";
 
 const slashingText = "Slashing";
 const piercingText = "Piercing";
@@ -29,34 +26,34 @@ const magicText = "Magic";
 const MajorButtonColumn: FC = () => {
   return (
     <StyleButtonColumn>
-      <StyleEffectButtonContainer>
+      <StyleButtonContainer>
         <Button
           buttonText={slashingText}
           titleText={majorSlashingTitle}
           bodyText={majorSlashingText}
         />
-      </StyleEffectButtonContainer>
-      <StyleEffectButtonContainer>
+      </StyleButtonContainer>
+      <StyleButtonContainer>
         <Button
           buttonText={piercingText}
           titleText={majorPiercingTitle}
           bodyText={majorPiercingText}
         />
-      </StyleEffectButtonContainer>
-      <StyleEffectButtonContainer>
+      </StyleButtonContainer>
+      <StyleButtonContainer>
         <Button
           buttonText={bludgeoningText}
           titleText={majorBludgeoningTitle}
           bodyText={majorBludgeoningText}
         />
-      </StyleEffectButtonContainer>
-      <StyleEffectButtonContainer>
+      </StyleButtonContainer>
+      <StyleButtonContainer>
         <Button
           buttonText={magicText}
           titleText={majorMagicTitle}
           bodyText={majorMagicText}
         />
-      </StyleEffectButtonContainer>
+      </StyleButtonContainer>
     </StyleButtonColumn>
   );
 };

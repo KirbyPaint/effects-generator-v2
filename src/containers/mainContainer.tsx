@@ -1,6 +1,7 @@
 import { FC } from "react";
+import { DataStore } from "../components/DataStore";
 import { StyleMainContainer } from "../styles/styles";
-import ButtonArray from "./buttonArray";
+import ButtonColumnContainer from "./buttonColumnContainer";
 import EffectList from "./effectList";
 import HeaderContainer from "./headerContainer";
 
@@ -9,7 +10,7 @@ const MainContainer: FC = () => {
     <div>
       <HeaderContainer />
       <StyleMainContainer>
-        <ButtonArray />
+        <ButtonColumnContainer />
         <EffectList
           data={[
             "Component must get main data from the mainContainer.tsx file",
@@ -17,6 +18,7 @@ const MainContainer: FC = () => {
           ]}
         />
       </StyleMainContainer>
+      {/* <DataStore /> */}
     </div>
   );
 };

@@ -16,10 +16,7 @@ import {
   fumbleRangedText,
   fumbleRangedTitle,
 } from "../../components/util/effectsArrays/0fumble/fumbleRanged";
-import {
-  StyleButtonColumn,
-  StyleEffectButtonContainer,
-} from "../../styles/styles";
+import { StyleButtonColumn, StyleButtonContainer } from "../../styles/styles";
 
 const meleeText = "Melee";
 const rangedText = "Ranged";
@@ -29,34 +26,34 @@ const magicText = "Magic";
 const FumbleButtonColumn: FC = () => {
   return (
     <StyleButtonColumn>
-      <StyleEffectButtonContainer>
+      <StyleButtonContainer>
         <Button
           buttonText={meleeText}
           titleText={fumbleMeleeTitle}
           bodyText={fumbleMeleeText}
         />
-      </StyleEffectButtonContainer>
-      <StyleEffectButtonContainer>
+      </StyleButtonContainer>
+      <StyleButtonContainer>
         <Button
           buttonText={rangedText}
           titleText={fumbleRangedTitle}
           bodyText={fumbleRangedText}
         />
-      </StyleEffectButtonContainer>
-      <StyleEffectButtonContainer>
+      </StyleButtonContainer>
+      <StyleButtonContainer>
         <Button
           buttonText={naturalText}
           titleText={fumbleNaturalTitle}
           bodyText={fumbleNaturalText}
         />
-      </StyleEffectButtonContainer>
-      <StyleEffectButtonContainer>
+      </StyleButtonContainer>
+      <StyleButtonContainer>
         <Button
           buttonText={magicText}
           titleText={fumbleMagicTitle}
           bodyText={fumbleMagicText}
         />
-      </StyleEffectButtonContainer>
+      </StyleButtonContainer>
     </StyleButtonColumn>
   );
 };
