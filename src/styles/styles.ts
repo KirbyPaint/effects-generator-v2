@@ -7,7 +7,6 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body, html {
-    height: 100%;
     background-color: lightgray;
   }
 `;
