@@ -2,6 +2,8 @@ import { FC, useState } from "react";
 import { StyleButton } from "../styles/styles";
 import Popup from "../components/popup";
 import { randomizer } from "./util/randomNumberGenerator";
+import { useRecoilState } from "recoil";
+import { textState, titleState } from "./DataStore";
 
 interface IButton {
   buttonText: string;
@@ -13,22 +15,32 @@ const Button: FC<IButton> = (props) => {
   const { buttonText, titleText, bodyText } = props;
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [randomEffect, setRandomEffect] = useState(0);
-  const [cardTitleText, setCardTitleText] = useState("");
-  const [cardBodyText, setCardBodyText] = useState("");
+  const [titleDetails, setTitleDetails] = useRecoilState(titleState);
+  const [textDetails, setTextDetails] = useRecoilState(textState);
+
+  function setCurrentEffect(title: string, text: string) {
+    setTitleDetails(title);
+    setTextDetails(text);
+  }
+
+  function getCurrentEffect() {
+    const [titleDetails, setTitleDetails] = useRecoilState(titleState);
+    const [textDetails, setTextDetails] = useRecoilState(textState);
+    return [titleDetails, textDetails];
+  }
 
   function toggleShowModal() {
     setRandomEffect(randomizer());
     setModalIsOpen(!modalIsOpen);
-    setCardTitleText(titleText[randomEffect]);
-    setCardBodyText(bodyText[randomEffect]);
+    setCurrentEffect(titleText[randomEffect], bodyText[randomEffect]);
   }
   return (
     <StyleButton onClick={toggleShowModal}>
       {buttonText}
       {modalIsOpen && (
         <Popup
-          titleText={titleText[randomEffect]}
-          bodyText={bodyText[randomEffect]}
+          titleText={titleDetails}
+          bodyText={textDetails}
           closeModal={toggleShowModal}
         />
       )}

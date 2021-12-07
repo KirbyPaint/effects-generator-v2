@@ -73,6 +73,7 @@ export const StyleEffectCard = styled.div`
   border: 2px solid green;
   padding: 5px;
   margin: 5px;
+  max-width: fit-content;
 `;
 
 export const StylePopupWindow = styled.div`
@@ -111,4 +112,10 @@ export const StylePopupTitle = styled.p`
 export const StyleBodyText = styled.div`
   white-space: pre-wrap;
   font-size: 20px;
+`;
+
+export const StyleDataStore = styled.div`
+  border: 2px dashed black;
+  margin: 10px;
+  padding: 10px;
 `;
