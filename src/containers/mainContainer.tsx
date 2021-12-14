@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { DataStore } from "../components/DataStore";
-import { StyleDataStore, StyleMainContainer } from "../styles/styles";
+import { StyleMainContainer } from "../styles/styles";
 import ButtonColumnContainer from "./buttonColumnContainer";
 import EffectList from "./effectList";
 import HeaderContainer from "./headerContainer";
@@ -18,9 +17,9 @@ const MainContainer: FC = () => {
           ]}
         />
       </StyleMainContainer>
-      <StyleDataStore>
+      {/* <StyleDataStore>
         <DataStore />
-      </StyleDataStore>
+      </StyleDataStore> */}
     </div>
   );
 };

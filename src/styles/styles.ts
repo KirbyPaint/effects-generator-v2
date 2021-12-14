@@ -6,6 +6,11 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
   body, html {
     background-color: lightgray;
   }
@@ -27,27 +32,31 @@ export const StyleHeaderText = styled.h1`
 `;
 
 export const StyleButtonColumnContainer = styled.div`
-  border: 5px dashed black;
+  border: 1px dashed black;
   border-radius: 15px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 `;
 
 export const StyleMainContainer = styled.div`
-  border: 10px dashed red;
+  border: 1px dashed red;
   max-width: 100%;
+  max-height: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 85% auto;
 `;
 
 export const StyleEffectContainer = styled.div`
-  border: 5px dashed gold;
+  border: 10px dashed gold;
+  max-width: 100%;
   max-height: auto;
+  padding: 10px;
+  position: relative;
 `;
 
 export const StyleButtonColumn = styled.div`
-  border: 2px dashed purple;
+  border: 1px dashed purple;
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
   justify-content: center;
@@ -55,13 +64,13 @@ export const StyleButtonColumn = styled.div`
 `;
 
 export const StyleButtonContainer = styled.div`
-  border: 2px dashed blue;
+  border: 1px dashed blue;
   margin: 10px;
   padding: 10px;
 `;
 
 export const StyleButton = styled.div`
-  border: 2px solid blue;
+  border: 1px solid blue;
   background-color: blue;
   width: 100px;
   height: 100px;
@@ -70,10 +79,10 @@ export const StyleButton = styled.div`
 `;
 
 export const StyleEffectCard = styled.div`
-  border: 2px solid green;
-  padding: 5px;
-  margin: 5px;
-  max-width: fit-content;
+  border: 1px solid green;
+  min-width: 100%;
+  max-width: 100%;
+  word-break: break-word;
 `;
 
 export const StylePopupWindow = styled.div`
@@ -83,7 +92,6 @@ export const StylePopupWindow = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(202, 166, 115);
-  /* padding: 50px; */
   width: (min-content + 50px);
   border: 10px solid rgb(165, 91, 42);
   border-radius: 50px;
@@ -92,7 +100,6 @@ export const StylePopupWindow = styled.div`
 `;
 
 export const StylePopupContainer = styled.div`
-  /* border: 2px dashed green; */
   margin: 10px;
   padding: 10px;
 `;
@@ -115,7 +122,18 @@ export const StyleBodyText = styled.div`
 `;
 
 export const StyleDataStore = styled.div`
-  border: 2px dashed black;
+  border: 1px dashed black;
   margin: 10px;
   padding: 10px;
+`;
+
+export const StyleClosePopupButton = styled.button`
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  float: right;
 `;

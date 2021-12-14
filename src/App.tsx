@@ -1,13 +1,7 @@
 import MainContainer from "./containers/mainContainer";
 import { GlobalStyle } from "./styles/styles";
 import GlobalFonts from "./fonts/moria_citadel/fonts";
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from "recoil";
+import { RecoilRoot } from "recoil";
 
 function App(): JSX.Element {
   return (

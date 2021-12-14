@@ -1,9 +1,15 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { StyleButton } from "../styles/styles";
 import Popup from "../components/popup";
 import { randomizer } from "./util/randomNumberGenerator";
 import { useRecoilState } from "recoil";
-import { textState, titleState } from "./DataStore";
+import {
+  effectsListState,
+  popupState,
+  randomEffectState,
+  textState,
+  titleState,
+} from "./DataStore";
 
 interface IButton {
   buttonText: string;
@@ -13,37 +19,28 @@ interface IButton {
 
 const Button: FC<IButton> = (props) => {
   const { buttonText, titleText, bodyText } = props;
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [randomEffect, setRandomEffect] = useState(0);
+  const [popupIsOpen, setPopupIsOpen] = useRecoilState(popupState);
+  const [randomEffect, setRandomEffect] = useRecoilState(randomEffectState);
   const [titleDetails, setTitleDetails] = useRecoilState(titleState);
   const [textDetails, setTextDetails] = useRecoilState(textState);
+  const [effectsListDetails, setEffectsListDetails] =
+    useRecoilState(effectsListState);
 
   function setCurrentEffect(title: string, text: string) {
     setTitleDetails(title);
     setTextDetails(text);
   }
 
-  function getCurrentEffect() {
-    const [titleDetails, setTitleDetails] = useRecoilState(titleState);
-    const [textDetails, setTextDetails] = useRecoilState(textState);
-    return [titleDetails, textDetails];
-  }
-
   function toggleShowModal() {
     setRandomEffect(randomizer());
-    setModalIsOpen(!modalIsOpen);
+    setPopupIsOpen(true);
     setCurrentEffect(titleText[randomEffect], bodyText[randomEffect]);
+    setEffectsListDetails([...effectsListDetails]);
   }
   return (
     <StyleButton onClick={toggleShowModal}>
       {buttonText}
-      {modalIsOpen && (
-        <Popup
-          titleText={titleDetails}
-          bodyText={textDetails}
-          closeModal={toggleShowModal}
-        />
-      )}
+      {popupIsOpen && <Popup titleText={titleDetails} bodyText={textDetails} />}
     </StyleButton>
   );
 };

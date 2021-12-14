@@ -1,5 +1,5 @@
 import React from "react";
-import { atom, useRecoilState } from "recoil";
+import { atom } from "recoil";
 
 // testing Recoil now I guess
 
@@ -13,8 +13,21 @@ export const titleState = atom({
   default: "default title",
 });
 
-// const [titleDetails, setTitleDetails] = useRecoilState(titleState);
-// const [textDetails, setTextDetails] = useRecoilState(textState);
+export const popupState = atom({
+  key: "popupState",
+  default: false,
+});
+
+export const randomEffectState = atom({
+  key: "randomEffectState",
+  default: 0,
+});
+
+export const effectsListState = atom({
+  key: "effectsListState",
+  default: [],
+});
+
 export class DataStore extends React.Component {
   constructor(props: Record<string, unknown>) {
     super(props),

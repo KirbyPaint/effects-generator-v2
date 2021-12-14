@@ -5,11 +5,12 @@ import {
   StylePopupTitle,
   StylePopupWindow,
 } from "../styles/styles";
+import ClosePopupButton from "./closePopupButton";
 
 interface IPopup {
   titleText: string;
   bodyText: string;
-  closeModal: () => void;
+  // closeModal: () => void;
 }
 
 const Popup: FC<IPopup> = (props) => {
@@ -17,6 +18,7 @@ const Popup: FC<IPopup> = (props) => {
   return (
     <StylePopupWindow>
       <StylePopupContainer>
+        <ClosePopupButton data={"x"} />
         <StylePopupTitle>{titleText}</StylePopupTitle>
       </StylePopupContainer>
       <StylePopupContainer>
