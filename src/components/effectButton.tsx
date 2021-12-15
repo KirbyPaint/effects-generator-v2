@@ -31,14 +31,17 @@ const Button: FC<IButton> = (props) => {
     setTextDetails(text);
   }
 
-  function toggleShowModal() {
+  function triggerEffect() {
     setRandomEffect(randomizer());
     setPopupIsOpen(true);
     setCurrentEffect(titleText[randomEffect], bodyText[randomEffect]);
-    setEffectsListDetails([...effectsListDetails]);
+    setEffectsListDetails([
+      ...effectsListDetails,
+      [titleText[randomEffect], bodyText[randomEffect]],
+    ]);
   }
   return (
-    <StyleButton onClick={toggleShowModal}>
+    <StyleButton onClick={triggerEffect}>
       {buttonText}
       {popupIsOpen && <Popup titleText={titleDetails} bodyText={textDetails} />}
     </StyleButton>

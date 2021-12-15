@@ -31,28 +31,29 @@ export const StyleHeaderText = styled.h1`
   color: white;
 `;
 
+export const StyleMainContainer = styled.div`
+  border: 1px dashed red;
+  height: 90vh;
+  width: 99vw;
+  display: grid;
+  grid-template-columns: 85% auto;
+  max-width: 100vw;
+`;
+
 export const StyleButtonColumnContainer = styled.div`
   border: 1px dashed black;
   border-radius: 15px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-`;
-
-export const StyleMainContainer = styled.div`
-  border: 1px dashed red;
-  max-width: 100%;
-  max-height: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 85% auto;
 `;
 
 export const StyleEffectContainer = styled.div`
   border: 10px dashed gold;
   max-width: 100%;
-  max-height: auto;
+  max-height: 100%;
   padding: 10px;
-  position: relative;
+  overflow-y: auto;
 `;
 
 export const StyleButtonColumn = styled.div`
@@ -61,12 +62,14 @@ export const StyleButtonColumn = styled.div`
   grid-template-rows: 25% 25% 25% 25%;
   justify-content: center;
   padding: 10px 0px;
+  height: 100%;
 `;
 
 export const StyleButtonContainer = styled.div`
   border: 1px dashed blue;
   margin: 10px;
   padding: 10px;
+  align-self: center;
 `;
 
 export const StyleButton = styled.div`

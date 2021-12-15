@@ -25,7 +25,7 @@ export const randomEffectState = atom({
 
 export const effectsListState = atom({
   key: "effectsListState",
-  default: [],
+  default: [] as string[][],
 });
 
 export class DataStore extends React.Component {
