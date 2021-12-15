@@ -26,26 +26,29 @@ const Button: FC<IButton> = (props) => {
   const [effectsListDetails, setEffectsListDetails] =
     useRecoilState(effectsListState);
 
-  function setCurrentEffect(title: string, text: string) {
-    setTitleDetails(title);
-    setTextDetails(text);
-  }
-
   function triggerEffect() {
-    setRandomEffect(randomizer());
-    setPopupIsOpen(true);
-    setCurrentEffect(titleText[randomEffect], bodyText[randomEffect]);
+    const randomNumber = randomizer();
+    setRandomEffect(randomNumber);
+    setTitleDetails(titleText[randomEffect]);
+    setTextDetails(bodyText[randomEffect]);
     setEffectsListDetails([
       ...effectsListDetails,
       [titleText[randomEffect], bodyText[randomEffect]],
     ]);
+    setPopupIsOpen(true);
+    showMeTheDebugging();
   }
-  return (
-    <StyleButton onClick={triggerEffect}>
-      {buttonText}
-      {popupIsOpen && <Popup titleText={titleDetails} bodyText={textDetails} />}
-    </StyleButton>
-  );
+
+  function showMeTheDebugging() {
+    console.log(`-----DEBUGGING-----`);
+    console.log("randomNumber :>> ", randomEffect);
+    console.log("popupIsOpen :>> ", popupIsOpen);
+    console.log("titleDetails :>> ", titleDetails);
+    console.log("textDetails :>> ", textDetails);
+    console.log(`-------------------`);
+  }
+
+  return <div onClick={() => triggerEffect()}>{buttonText}</div>;
 };
 
 export default Button;

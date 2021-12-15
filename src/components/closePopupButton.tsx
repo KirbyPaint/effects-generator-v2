@@ -3,7 +3,6 @@ import { StyleClosePopupButton } from "../styles/styles";
 import { useRecoilState } from "recoil";
 import { popupState } from "./DataStore";
 
-// tslint:disable-next-line: no-empty-interface
 interface IClosePopupButton {
   data: string;
 }

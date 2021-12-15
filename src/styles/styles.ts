@@ -72,7 +72,7 @@ export const StyleButtonContainer = styled.div`
   align-self: center;
 `;
 
-export const StyleButton = styled.div`
+export const StyleButton = styled.button`
   border: 1px solid blue;
   background-color: blue;
   width: 100px;

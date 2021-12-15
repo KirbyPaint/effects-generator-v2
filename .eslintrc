@@ -8,7 +8,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "no-console": 2,
+    "no-console": 1,
     "no-const-assign": 2,
     "eqeqeq": 2
   }
