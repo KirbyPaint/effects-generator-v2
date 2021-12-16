@@ -18,7 +18,9 @@ const EffectList: FC<IEffectList> = () => {
   return (
     <StyleEffectContainer>
       {getEffectsList()
-        .map((effect) => <EffectCard key={v4()} data={effect} />)
+        .map((effect) => (
+          <EffectCard key={v4()} data={effect} color={effect[2]} />
+        ))
         .reverse()}
     </StyleEffectContainer>
   );

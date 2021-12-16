@@ -36,7 +36,7 @@ export const StyleMainContainer = styled.div`
   height: 90vh;
   width: 99vw;
   display: grid;
-  grid-template-columns: 85% auto;
+  grid-template-columns: 70% auto;
   max-width: 100vw;
 `;
 
@@ -54,6 +54,9 @@ export const StyleEffectContainer = styled.div`
   max-height: 100%;
   padding: 10px;
   overflow-y: auto;
+  &&::-webkit-scrollbar {
+    width: 0px;
+  }
 `;
 
 export const StyleButtonColumn = styled.div`
@@ -73,19 +76,33 @@ export const StyleButtonContainer = styled.div`
 `;
 
 export const StyleButton = styled.button`
-  border: 1px solid blue;
+  border: 2px dashed white;
   background-color: blue;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 300px;
   color: white;
+  box-shadow: 5px 15px 5px black;
+  &&:hover {
+    transform: scale(1.1, 1.1);
+  }
+  &&:active {
+    transform: translate(0px, 8px);
+    box-shadow: 5px 7px 8px black;
+  }
 `;
 
 export const StyleEffectCard = styled.div`
-  border: 1px solid green;
+  border-width: 10px;
+  border-radius: 10px;
+  border-style: ridge groove groove ridge;
+  border-color: ${(props) => props.color};
   min-width: 100%;
   max-width: 100%;
+  margin-bottom: 10px;
+  padding: 0px 10px;
   word-break: break-word;
+  background-color: ${(props) => props.color};
 `;
 
 export const StylePopupWindow = styled.div`
@@ -139,4 +156,8 @@ export const StyleClosePopupButton = styled.button`
   width: 50px;
   height: 50px;
   float: right;
+`;
+
+export const StyleMoriaFont = styled.p`
+  font-family: "Moria Citadel";
 `;

@@ -1,9 +1,8 @@
 import { FC } from "react";
-import { StyleButton } from "../styles/styles";
-import Popup from "../components/popup";
 import { randomizer } from "./util/randomNumberGenerator";
 import { useRecoilState } from "recoil";
 import {
+  colorState,
   effectsListState,
   popupState,
   randomEffectState,
@@ -25,15 +24,30 @@ const Button: FC<IButton> = (props) => {
   const [textDetails, setTextDetails] = useRecoilState(textState);
   const [effectsListDetails, setEffectsListDetails] =
     useRecoilState(effectsListState);
+  const [color, setColor] = useRecoilState(colorState);
 
   function triggerEffect() {
     const randomNumber = randomizer();
     setRandomEffect(randomNumber);
     setTitleDetails(titleText[randomEffect]);
     setTextDetails(bodyText[randomEffect]);
+    switch (buttonText) {
+      case "Slashing":
+        setColor(`blue`);
+        break;
+      case "Bludgeoning":
+        setColor(`red`);
+        break;
+      case "Piercing":
+        setColor(`green`);
+        break;
+      case "Magic":
+        setColor(`orange`);
+        break;
+    }
     setEffectsListDetails([
       ...effectsListDetails,
-      [titleText[randomEffect], bodyText[randomEffect]],
+      [titleText[randomEffect], bodyText[randomEffect], color],
     ]);
     setPopupIsOpen(true);
     showMeTheDebugging();
@@ -45,10 +59,11 @@ const Button: FC<IButton> = (props) => {
     console.log("popupIsOpen :>> ", popupIsOpen);
     console.log("titleDetails :>> ", titleDetails);
     console.log("textDetails :>> ", textDetails);
+    console.log("color :>> ", color);
     console.log(`-------------------`);
   }
 
-  return <div onClick={() => triggerEffect()}>{buttonText}</div>;
+  return <div onClick={triggerEffect}>{buttonText}</div>;
 };
 
 export default Button;

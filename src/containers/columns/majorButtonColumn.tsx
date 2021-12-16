@@ -16,7 +16,11 @@ import {
   majorSlashingText,
   majorSlashingTitle,
 } from "../../components/util/effectsArrays/2major/majorSlashing";
-import { StyleButtonColumn, StyleButtonContainer } from "../../styles/styles";
+import {
+  StyleButton,
+  StyleButtonColumn,
+  StyleButtonContainer,
+} from "../../styles/styles";
 
 const slashingText = "Slashing";
 const piercingText = "Piercing";
@@ -27,32 +31,40 @@ const MajorButtonColumn: FC = () => {
   return (
     <StyleButtonColumn>
       <StyleButtonContainer>
-        <Button
-          buttonText={slashingText}
-          titleText={majorSlashingTitle}
-          bodyText={majorSlashingText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={slashingText}
+            titleText={majorSlashingTitle}
+            bodyText={majorSlashingText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={piercingText}
-          titleText={majorPiercingTitle}
-          bodyText={majorPiercingText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={piercingText}
+            titleText={majorPiercingTitle}
+            bodyText={majorPiercingText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={bludgeoningText}
-          titleText={majorBludgeoningTitle}
-          bodyText={majorBludgeoningText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={bludgeoningText}
+            titleText={majorBludgeoningTitle}
+            bodyText={majorBludgeoningText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={magicText}
-          titleText={majorMagicTitle}
-          bodyText={majorMagicText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={magicText}
+            titleText={majorMagicTitle}
+            bodyText={majorMagicText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
     </StyleButtonColumn>
   );

@@ -17,7 +17,11 @@ import {
   severeSlashingTitle,
 } from "../../components/util/effectsArrays/3severe/severeSlashing";
 import { IButtonColumn } from "../../components/util/exports";
-import { StyleButtonColumn, StyleButtonContainer } from "../../styles/styles";
+import {
+  StyleButton,
+  StyleButtonColumn,
+  StyleButtonContainer,
+} from "../../styles/styles";
 
 const slashingText = "Slashing";
 const piercingText = "Piercing";
@@ -28,32 +32,40 @@ const SevereButtonColumn: FC<IButtonColumn> = () => {
   return (
     <StyleButtonColumn>
       <StyleButtonContainer>
-        <Button
-          buttonText={slashingText}
-          titleText={severeSlashingTitle}
-          bodyText={severeSlashingText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={slashingText}
+            titleText={severeSlashingTitle}
+            bodyText={severeSlashingText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={piercingText}
-          titleText={severePiercingTitle}
-          bodyText={severePiercingText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={piercingText}
+            titleText={severePiercingTitle}
+            bodyText={severePiercingText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={bludgeoningText}
-          titleText={severeBludgeoningTitle}
-          bodyText={severeBludgeoningText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={bludgeoningText}
+            titleText={severeBludgeoningTitle}
+            bodyText={severeBludgeoningText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={magicText}
-          titleText={severeMagicTitle}
-          bodyText={severeMagicText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={magicText}
+            titleText={severeMagicTitle}
+            bodyText={severeMagicText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
     </StyleButtonColumn>
   );

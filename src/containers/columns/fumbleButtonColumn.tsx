@@ -40,25 +40,31 @@ const FumbleButtonColumn: FC = () => {
         </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={rangedText}
-          titleText={fumbleRangedTitle}
-          bodyText={fumbleRangedText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={rangedText}
+            titleText={fumbleRangedTitle}
+            bodyText={fumbleRangedText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={naturalText}
-          titleText={fumbleNaturalTitle}
-          bodyText={fumbleNaturalText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={naturalText}
+            titleText={fumbleNaturalTitle}
+            bodyText={fumbleNaturalText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={magicText}
-          titleText={fumbleMagicTitle}
-          bodyText={fumbleMagicText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={magicText}
+            titleText={fumbleMagicTitle}
+            bodyText={fumbleMagicText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
     </StyleButtonColumn>
   );

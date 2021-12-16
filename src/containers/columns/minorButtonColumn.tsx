@@ -17,7 +17,11 @@ import {
   minorSlashingTitle,
 } from "../../components/util/effectsArrays/1minor/minorSlashing";
 import { IButtonColumn } from "../../components/util/exports";
-import { StyleButtonColumn, StyleButtonContainer } from "../../styles/styles";
+import {
+  StyleButton,
+  StyleButtonColumn,
+  StyleButtonContainer,
+} from "../../styles/styles";
 
 const slashingText = "Slashing";
 const piercingText = "Piercing";
@@ -28,32 +32,40 @@ const MinorButtonColumn: FC<IButtonColumn> = () => {
   return (
     <StyleButtonColumn>
       <StyleButtonContainer>
-        <Button
-          buttonText={slashingText}
-          titleText={minorSlashingTitle}
-          bodyText={minorSlashingText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={slashingText}
+            titleText={minorSlashingTitle}
+            bodyText={minorSlashingText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={piercingText}
-          titleText={minorPiercingTitle}
-          bodyText={minorPiercingText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={piercingText}
+            titleText={minorPiercingTitle}
+            bodyText={minorPiercingText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={bludgeoningText}
-          titleText={minorBludgeoningTitle}
-          bodyText={minorBludgeoningText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={bludgeoningText}
+            titleText={minorBludgeoningTitle}
+            bodyText={minorBludgeoningText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
       <StyleButtonContainer>
-        <Button
-          buttonText={magicText}
-          titleText={minorMagicTitle}
-          bodyText={minorMagicText}
-        />
+        <StyleButton>
+          <Button
+            buttonText={magicText}
+            titleText={minorMagicTitle}
+            bodyText={minorMagicText}
+          />
+        </StyleButton>
       </StyleButtonContainer>
     </StyleButtonColumn>
   );

@@ -28,6 +28,11 @@ export const effectsListState = atom({
   default: [] as string[][],
 });
 
+export const colorState = atom({
+  key: "colorState",
+  default: "white",
+});
+
 export class DataStore extends React.Component {
   constructor(props: Record<string, unknown>) {
     super(props),
